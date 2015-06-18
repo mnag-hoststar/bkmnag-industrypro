@@ -1,0 +1,68 @@
+
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bk-default">
+
+<header class="bk-header">
+    <div class="companyheader page-wrap clearfix">
+        <div class="flex-container">
+            <div class="header-left">
+                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+            </div>
+            <div class="header-right clearfix">
+                {{widget('profile', 'headercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}}
+            </div> 
+        </div>
+    </div>
+    <div class="nav-container clearfix">
+        <div class="page-wrap">
+            <div class="nav-column-one">
+                {{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
+            </div>
+            <div class="nav-column-two">
+                {{widget('profile', 'navcolumn1profilesocialicons', { 'profileType':'socialicons',   'socialicons':'profile'})|raw}}
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="page-wrap">
+    <div class="mainzone">
+        {{zone('main')|raw}}
+    </div>
+</div>
+
+<footer class="footer-bar">
+    <div class="page-wrap clearfix">
+        <div class="responsivecolumns columns-two-50-50">
+            <div class="column columns-two-left">
+                {{widget('companyname', 'footercompanyname', {"business": "profile"})|raw}}
+            </div>
+            <div class="column columns-two-right">
+                {{widget('profile', 'footercolumn1profileaddress', { 'profileType':'address', 'address':'profile'})|raw}} 
+            </div>
+        </div>
+    </div>
+</footer>
+
+<footer class="bk-footer">
+    <div class="page-wrap clearfix">
+    <div class="left-footer">
+        <div class="responsivecolumns columns-two-50-50">
+            <div class="column columns-two-left">
+                {{widget('profile', 'thisunqiuewidgetname', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
+            </div>
+            <div class="column columns-two-right">
+                {{widget('profile', 'footercolumn1profilesocialicons', { 'profileType':'socialicons',   'socialicons':'profile'})|raw}}
+            </div>
+        </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+{% endblock %}

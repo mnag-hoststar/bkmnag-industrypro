@@ -1,0 +1,148 @@
+{
+	"name":"IndustryPro",
+	"thumbnail":"industrypro.png",
+	"screenshot":"industrypro.png",
+    "tags": { "en": ["minimal", "clean", "blue", "modern", "design", "company", "commercial"] },
+    "pageTypes":["home"],
+    "templateType":"standard",
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#157aa6",
+            "color3":"#143e54",
+            "color4":"#1f343f",
+            "color5":"#535a5e",
+            "color6":"#ffffff",
+            "color7":"#eaeaea"
+        },
+        "Swatch 2": {
+            "color1":"#ffffff",
+            "color2":"#4182cc",
+            "color3":"#4f1c21",
+            "color4":"#343434",
+            "color5":"#5a5a5a",
+            "color6":"#ffffff",
+            "color7":"#eeeeee"
+        },
+        "Swatch 3": {
+            "color1":"#ffffff",
+            "color2":"#f99e23",
+            "color3":"#152440",
+            "color4":"#43464f",
+            "color5":"#73797f",
+            "color6":"#ffffff",
+            "color7":"#eeeeee"
+        },
+        "Swatch 4": {
+            "color1":"#ffffff",
+            "color2":"#f0b400",
+            "color3":"#412143",
+            "color4":"#3c363c",
+            "color5":"#898289",
+            "color6":"#ffffff",
+            "color7":"#eeeeee"
+        },
+        "Swatch 5": {
+            "color1":"#ffffff",
+            "color2":"#2d2f33",
+            "color3":"#2d2f33",
+            "color4":"#2d2f33",
+            "color5":"#2d2f33",
+            "color6":"#ffffff",
+            "color7":"#eeeeee"
+        }
+    },
+    "images":[
+        "images/feature-bg.jpg"
+    ],
+    "fontSwatch": {
+       "title": "Helvetica",
+        "font1": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "46px",
+            "font-weight": "700",
+            "line-height": "50px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "36px",
+            "font-weight": "700",
+            "line-height": "44px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "28px",
+            "font-weight": "700",
+            "line-height": "32px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "22px",
+            "font-weight": "700",
+            "line-height": "30px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "14px",
+            "font-weight": "300",
+            "line-height": "24px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "14px",
+            "font-weight": "300",
+            "line-height": "24px",
+            "color": "@color-swatch1",
+            "color-hover": "@color-swatch1",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "@color-swatch2"
+         },
+        "font7": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "15px",
+            "font-weight": "400",
+            "line-height": "16px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit",
+            "color-hover": "@color-swatch1",
+            "background-color": "@color-swatch2",
+            "background-color-hover": "darken(@color-swatch2,10%)"
+        },
+        "font8": {
+            "font-family": "\"Georgia\", serif",
+            "font-size": "36px",
+            "font-weight": "400",
+            "line-height": "46px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"Georgia\", serif",
+            "font-size": "18px",
+            "font-weight": "400",
+            "line-height": "30px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "24px",
+            "font-weight": "700",
+            "line-height": "40px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        }
+    }
+}
