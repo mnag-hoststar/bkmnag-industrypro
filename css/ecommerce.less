@@ -85,6 +85,7 @@
 	    border: 1px solid fade(@color-swatch3, 15%);
 	    cursor: pointer;
 	    background-color: @color-swatch1;
+	    width: 100%;
 	    &:focus {
 			outline: 0;
 	    }
@@ -147,6 +148,10 @@
             }
         }
         input {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
             @media @mobile {
                 width: 100%;
                 max-width: 100%;
@@ -157,8 +162,11 @@
         .btn {
 			position: relative;
 			margin: 0;
+			min-width: 30%;
+			float: right;
             @media @mobile {
             	margin-bottom: 10px;
+            	width: 100%;
             }
         }
     }

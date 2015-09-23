@@ -71,10 +71,10 @@ textarea,
 
 // Contact, Signup, Profile, Delivery
 .signupform,
-.canvas .widget.profile form,
+.widget.profile form,
 .bottom-profile .widget.profile form,
 .delivery,
-.blog-search-form {
+.blog-search-form{
     background-color: fade(@color-swatch3, 5%);
 	border-left: 1px solid fade(@color-swatch2, 50%);
 	padding: 20px;
@@ -82,9 +82,13 @@ textarea,
 		margin: 0;
 		input {
 		}
-		button.btn {
-		}
 	}
+	button {
+        width: 30%;
+        @media @mobile {
+            width: 100%;
+        }
+    }
 }
 // Form
 
@@ -103,16 +107,17 @@ textarea,
 	button.btn {
 		margin-top: 13px;
 		float: right;
+		width: 30%;
 	}
 }
 
 .signupform {
-	margin-bottom:10px;
+	margin-bottom: 10px;
 	@media @tablet {
-		max-width:100%;
+		max-width: 100%;
 	}
 	@media @mobile {
-		max-width:100%;
+		max-width: 100%;
 	}
 	label {
 	    font-size: @font-swatch5-font-size;
@@ -159,7 +164,7 @@ label {
     color:@font-swatch7-color;
     padding: 0 30px;
     height: 40px;
-    width: 30%;
+    //width: 30%;
     border: 0;
 	&:hover {
 		background-color:@font-swatch7-background-color-hover;

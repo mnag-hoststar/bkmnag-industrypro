@@ -6,6 +6,24 @@
 <div class="bk-default">
 
 <header class="bk-header">
+    <div class="slider-header">
+        {{widget('responsiveslideshow', 'responsiveslideshow',
+                {'duration':'6',
+                    'transSpeed': '1000',
+                    'transType': 'fade',
+                    'showButtons': false,
+                    'showBullets': false,
+                    'allowPause': false,
+                    'allowLoop': true,
+                    'showDescription': false,
+                    'showTitle': false,
+                    'crop': true,
+                    'images': [
+                        {'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('/images/header.png'), 'title':'', 'description': ''}
+                    ]
+                })|raw
+            }}
+    </div>
     <div class="companyheader page-wrap clearfix">
         <div class="flex-container">
             <div class="header-left">

@@ -54,7 +54,7 @@
         }
     },
     "images":[
-        "images/feature-bg.jpg"
+        "images/feature-bg.jpg", "images/header.png"
     ],
     "fontSwatch": {
        "title": "Helvetica",
