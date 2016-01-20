@@ -35,7 +35,9 @@
             </div> 
         </div>
     </div>
-    <div class="nav-container clearfix">
+</header>
+
+<div class="nav-container clearfix">
         <div class="page-wrap">
             <div class="nav-column-one">
                 {{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
@@ -45,7 +47,6 @@
             </div>
         </div>
     </div>
-</header>
 
 <div class="page-wrap">
     <div class="mainzone">
@@ -71,7 +72,7 @@
     <div class="left-footer">
         <div class="responsivecolumns columns-two-50-50">
             <div class="column columns-two-left">
-                {{widget('profile', 'thisunqiuewidgetname', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
+                {{widget('profile', 'footercopyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
             </div>
             <div class="column columns-two-right">
                 {{widget('profile', 'footercolumn1profilesocialicons', { 'profileType':'socialicons',   'socialicons':'profile'})|raw}}
