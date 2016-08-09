@@ -1,7 +1,7 @@
 {
 	"name":"IndustryPro",
-	"thumbnail":"industrypro.png",
-	"screenshot":"industrypro.png",
+	"thumbnail":"thumbnail.png",
+	"screenshot":"industrypro-screenshot.jpg",
     "tags": { "en": ["minimal", "clean", "blue", "modern", "design", "company", "commercial"] },
     "pageTypes":["home"],
     "templateType":"standard",
