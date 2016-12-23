@@ -41,10 +41,15 @@ select {
 	text-indent: 5px;
 	background-color: white;
 	width: 70%;
+	height: 40px;
 	@media @mobile {
 	    width: 100%;
 	    margin-bottom: 10px;
 	}
+}
+
+textarea {
+	height: 100px;
 }
 
 input:focus, textarea:focus, .widget.profile form fieldset input:focus {
@@ -97,13 +102,13 @@ label, .contactform label, .advancedcontactform label {
 	font-size: @font-swatch5-font-size;
 }
 
+.form-group {
+	margin-bottom: 1em;
+}
 
-.contactform {
-	button.btn {
-		margin-top: 13px;
-		float: right;
-		width: 30%;
-	}
+.contactform button, .contactform button.btn, .advancedcontactform button, .advancedcontactform button.btn {
+	float: right;
+	width: 30%;
 }
 
 .signupform {
