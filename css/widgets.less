@@ -35,13 +35,12 @@
 
 input, textarea,
 .widget.profile form fieldset input,
-.signupform fieldset input {
+.signupform fieldset input,
+select {
 	border: 1px solid fade(@color-swatch3, 15%);
 	text-indent: 5px;
 	background-color: white;
-	float: left;
 	width: 70%;
-	height: 40px;
 	@media @mobile {
 	    width: 100%;
 	    margin-bottom: 10px;
@@ -72,6 +71,8 @@ textarea,
 // Contact, Signup, Profile, Delivery
 .signupform,
 .widget.profile form,
+.contactform form,
+.advancedcontactform form,
 .bottom-profile .widget.profile form,
 .delivery,
 .blog-search-form{
@@ -92,18 +93,12 @@ textarea,
 }
 // Form
 
+label, .contactform label, .advancedcontactform label {
+	font-size: @font-swatch5-font-size;
+}
+
+
 .contactform {
-    fieldset {
-        border-left: 1px solid fade(@color-swatch2, 50%);
-	    padding: 20px;
-	    background-color: fade(@color-swatch3, 5%);
-    }
-    label {
-        font-size: @font-swatch5-font-size;
-    }
-    input {
-        margin-bottom: 20px;
-    }
 	button.btn {
 		margin-top: 13px;
 		float: right;
@@ -129,11 +124,6 @@ textarea,
     }
 }
 
-
-label {
-	margin-bottom: 10px!important;
-	font-size: @font-swatch5-font-size!important;
-} 
 
 .ecom-productslist-products label {
 	margin-bottom:0!important;
