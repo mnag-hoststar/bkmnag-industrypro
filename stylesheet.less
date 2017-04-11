@@ -217,6 +217,7 @@ header.bk-header {
 	display: inline-block;
 	vertical-align: middle;
 	width: 75%;
+	
 	@media @tablet {
 		width: 100%;
 		float: left;
@@ -229,6 +230,7 @@ header.bk-header {
 	padding-top: 5px;
 	text-align: right;
 	vertical-align: middle;
+	
 	@media @tablet {
 		width: 100%;
 	}
@@ -238,7 +240,24 @@ header.bk-header {
 	margin-bottom: 5px;
 }
 
+/* Navigation */
 
+.extendednavigation {
+	position: relative;
+	min-height: 60px;
+}
+
+/* Navbar Menu Mobile */
+
+.nav-container .widget .extendednavigation a.pull,
+.nav-container .widget .navigation a.pull {
+	@media only screen and (max-width: 769px) {
+		position: absolute;
+		margin: 20px 0;
+		height: 17px;
+		top: 0;
+	}
+}
 
 /* .navbar {
 	background-color:@color-swatch1;
@@ -269,8 +288,7 @@ header.bk-header {
 
 .widget .extendednavigation ul {
 	@media @tablet {
-		 padding-top: 0;
-		 margin: 10px 0px 0px;
+		 padding-top: 50px;
 	}
 	li {
 		padding: 0;
