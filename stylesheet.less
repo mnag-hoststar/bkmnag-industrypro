@@ -117,18 +117,37 @@ header.bk-header {
 }
 
 .slider-header {
-	position: relative;
+	position: absolute;
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 	overflow: hidden;
 	height: 100%;
 	z-index: 0;
 	
 	.widget.responsiveslideshow {
+	    min-height: auto;
+	    position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+	    
 		.slideshow-widget, .slideshow-image-list {
 			min-height: 200px;
 			height: 200px;
+			
 			@media @tablet {
-				height: 300px;
+			    height: 100%;
+			    min-height: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
 			}
+			
 			.crop span.inner {
 				background-size: cover;
 			}
