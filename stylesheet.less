@@ -98,18 +98,22 @@ header.bk-header {
 	background-color: @color-swatch4;
 	height: 200px;
 	position: relative;
+	
 	@media @tablet {
-		height: 300px;
+		height: auto;
 	}
 }
 
 .companyheader {
 	position: absolute;
-	top: 50%;
-	transform: translate(0,-50%);
+	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 9999;
+	
+	@media @tablet {
+	    position: relative;
+	}
 }
 
 .slider-header {
@@ -117,6 +121,7 @@ header.bk-header {
 	overflow: hidden;
 	height: 100%;
 	z-index: 0;
+	
 	.widget.responsiveslideshow {
 		.slideshow-widget, .slideshow-image-list {
 			min-height: 200px;
@@ -220,6 +225,7 @@ header.bk-header {
 	
 	@media @tablet {
 		width: 100%;
+		min-height: 45px;
 		float: left;
 	}
 }
@@ -244,7 +250,6 @@ header.bk-header {
 
 .extendednavigation {
 	position: relative;
-	min-height: 60px;
 }
 
 /* Navbar Menu Mobile */
@@ -253,7 +258,7 @@ header.bk-header {
 .nav-container .widget .navigation a.pull {
 	@media only screen and (max-width: 769px) {
 		position: absolute;
-		margin: 20px 0;
+		margin: 13px 0;
 		height: 17px;
 		top: 0;
 	}
@@ -315,26 +320,33 @@ header.bk-header {
   border-top-color: @font-swatch6-color;
 }
 
-.widget .extendednavigation > ul > li > a, .widget .extendednavigation ul li.folder > .text {
-	padding: 10px 25px;
-	@media @tablet {
-		padding: 10px 10px;
-	}
+.widget .extendednavigation > ul > li > a,
+.widget .extendednavigation ul li.folder > .text {
+	padding: 13px 25px 10px;
+}
+
+.widget .extendednavigation ul li.folder > .text {
+    padding: 13px 40px 10px 25px;
+}
+
+.widget .extendednavigation ul.align-center li.folder > .text {
+    @media @tablet {
+		padding: 13px 40px 10px 40px;
+    }
 }
 
 .widget .extendednavigation ul li.folder:after {
 	top: 48%;
 }
 
-.widget .extendednavigation ul li.folder:after {
-	border-top-color: @color-swatch1;
+.widget .extendednavigation ul.align-right li.folder::after {
+    @media @tablet {
+        right: 22px;
+    }
 }
 
-.widget .extendednavigation ul li a {
-	padding: 10px 25px;
-	@media @tablet {
-		padding: 10px 10px;
-	}
+.widget .extendednavigation ul li.folder:after {
+	border-top-color: @color-swatch1;
 }
 
 .widget .extendednavigation ul li.folder ul li a {
@@ -350,6 +362,7 @@ header.bk-header {
 
 .widget .extendednavigation ul li:hover ul {
 	background-color: darken(@color-swatch3,10%);
+	
 	@media @tablet {
 		margin: 0;
 		background-color: darken(@color-swatch3,10%);
@@ -359,6 +372,7 @@ header.bk-header {
 
 .widget .extendednavigation a.pull {
 	width: 100%;
+	
 	@media @tablet {
 		z-index: 999;
 	}
@@ -383,15 +397,16 @@ header.bk-header {
 .widget.extendednavigation .bk-overlay {
 	width: 100%;
 	top: 0;
+	
 	@media @tablet {
 		width: 100%!important;
 		top: -70px!important;
 	}
 }
 
-.widget .extendednavigation ul.align-right li.folder:after {
-	left: 5px;
-	right: inherit;
+.widget .extendednavigation ul li.folder::after,
+.widget .navigation ul li.folder::after {
+    right: 15px;
 }
 
 
@@ -608,7 +623,10 @@ footer.bk-footer .widget.profile .bk-profile-socialicons, .widget.profile span, 
 	}
 } 
 
-.column.columns-two-right .widget.profile span, .column.columns-two-right .widget.profile, .column.columns-two-right .widget.profile a, .column.columns-two-right .widget.profile p {
+.column.columns-two-right .widget.profile span,
+.column.columns-two-right .widget.profile,
+.column.columns-two-right .widget.profile a,
+.column.columns-two-right .widget.profile p {
 	@media @tablet {
 		float: none;
 	}
