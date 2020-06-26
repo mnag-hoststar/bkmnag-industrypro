@@ -846,7 +846,11 @@ footer .widget.profile .bk-profile-socialicons span a {
 
 footer.bk-footer .widget.profile .bk-profile-socialicons,
 .widget.profile span,
+.widget.profile,
+.widget.profile a,
 .widget.profile p {
+	color: @font-swatch10-color;
+
 	@media @mobile {
 		text-align: center;
 		float: none;
@@ -855,7 +859,6 @@ footer.bk-footer .widget.profile .bk-profile-socialicons,
 
 .footer-profile {
 	display: inline-block;
-	float: left;
 	width: 100%;
 	@media @mobile {
 		float: none;
@@ -866,43 +869,25 @@ footer.bk-footer .widget.profile .bk-profile-socialicons,
 	text-align: left;
 }
 
-.footer-bar .column.columns-two-right .widget.profile span,
-.footer-bar .column.columns-two-right .widget.profile,
-.footer-bar .column.columns-two-right .widget.profile a,
-.footer-bar .column.columns-two-right .widget.profile p {
-	float: right;
+.footer-bar .column .widget.profile span,
+.footer-bar .column .widget.profile,
+.footer-bar .column .widget.profile a,
+.footer-bar .column .widget.profile p {
 	color: @font-swatch10-color;
 	font-weight: @font-swatch4-font-weight;
 	padding-top: 8px;
-	@media @mobile {
-		float: none;
-		text-align: center;
-	}
-}
 
-.bk-footer .column.columns-two-right .widget.profile span,
-.bk-footer .column.columns-two-right .widget.profile,
-.bk-footer .column.columns-two-right .widget.profile a,
-.bk-footer .column.columns-two-right .widget.profile p {
-	float: right;
-	color: @font-swatch9-color;
-	font-weight: @font-swatch4-font-weight;
-	@media @mobile {
-		float: none;
-		text-align: center;
-	}
-}
-
-.column.columns-two-right .widget.profile span,
-.column.columns-two-right .widget.profile,
-.column.columns-two-right .widget.profile a,
-.column.columns-two-right .widget.profile p {
 	@media @tablet {
 		float: none;
 	}
+
+	@media @mobile {
+		float: none;
+		text-align: center;
+	}
 }
 
-.column.columns-two-right .widget.profile p {
+.column .widget.profile p {
 	@media @tablet {
 		width: 100%;
 		text-align: center;
@@ -911,6 +896,7 @@ footer.bk-footer .widget.profile .bk-profile-socialicons,
 
 .column.columns-two-left .widget.companyname {
 	float: left;
+	
 	@media @mobile {
 		margin: 0px auto;
 		display: table;
