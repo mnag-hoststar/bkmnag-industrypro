@@ -5,6 +5,7 @@
     "tags": { "en": ["minimal", "clean", "blue", "modern", "design", "company", "commercial"] },
     "pageTypes":["home"],
     "templateType":"standard",
+    "versionTenCompatible": 1,
     "colorSwatches":
     {
         "Swatch 1": {
