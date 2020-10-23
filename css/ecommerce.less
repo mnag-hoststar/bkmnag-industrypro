@@ -18,6 +18,19 @@
         .ecom-featuredproducts-image-wrap {
             margin-bottom: 1em;
             background-color: darken(@color-swatch1,3%);
+            background-position: center;
+
+            .style--light & {
+                background-color: darken(@color--light, 3%);
+            }
+
+            .style--accent & {
+                background-color: darken(@color--accent, 3%);
+            }
+
+            .style--dark & {
+                background-color: darken(@color--dark, 3%);
+            }
         }
         a:hover {
 			text-decoration: none;
@@ -39,15 +52,40 @@
 	font-size: @font-swatch4-font-size;
 	line-height: @font-swatch4-line-height;
 	font-weight: normal;
+
+    .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
 }
 
 // Product Price
 .ecom-productlist-price,
+.ecom-featuredproducts-price,
 .ecom-product-price,
 .checkout-pricepu,
 .checkout-amount {
 	font-family: @font-swatch2-font-family;
 	color: @font-swatch1-color;
+
+    .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
 }
 
 .checkout-total-amount {

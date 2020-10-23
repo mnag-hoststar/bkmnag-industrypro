@@ -1,0 +1,89 @@
+
+// -------------------------------------------
+//  Migration Styles -
+//
+//  These changes allow rows to work with
+//  existing templates in BK10
+// -------------------------------------------
+
+
+
+// Template styling resets
+// ------------------------------------
+
+#migrated {
+
+    > .page-wrap,
+    .nav-container + .page-wrap {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .feature-container {
+        padding-top: 0;
+    }
+
+    .mainzone {
+        padding: 0;
+    }
+}
+
+
+// Row improvments
+// ------------------------------------
+
+[id^="migrate"] .row--image-text-7a blockquote {
+    padding: 12px;
+}
+
+[id^="migrate"] .row--gallery-3a .image-data {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+[id^="migrate"] .row--gallery-4a .widget.gallery .image-data,
+[id^="migrate"] .row--gallery-4a .image-data:hover {
+    .align-items(center);
+    .flex-display;
+    .flex-direction(column);
+    .justify-content(center);
+}
+
+// Hides the caption for the logo section
+[class*="row--logos"] .widget.gallery .image-data {
+    display: none;
+    visibility: hidden;
+}
+
+
+// Re-add the reset styles
+// ------------------------------------
+
+#migrated {
+
+    #page-zones__main > .widget:not([data-name="row"]),
+    .widget.feature,
+    [data-name="row"] .row:not(.row--width-no-padding) .row__container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+        width: 90%;
+    }
+
+    #page-zones__main > .widget:not([data-name="row"]) {
+        &:first-child {
+            margin-top: 40px;
+        }
+
+        &:last-child {
+            margin-bottom: 20px;        // Re-add main zone bottom spacing
+        }
+    }
+
+    .widget.feature:not(.bk-tpl-hidden) {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}
