@@ -57,6 +57,8 @@ h3 {
 }
 
 h1, h2, h3, h4, h5, h6, [class*="contentgroup__h"] {
+    word-break: break-word;
+
     .style--light & {
         color: @contrast--light;
     }
@@ -122,6 +124,7 @@ blockquote {
 	border-left: 1px solid fade(@color-swatch2, 50%);
 	font-style: italic;
 	font-size: large;
+	word-break: break-word;
 
 	.style--light & {
         background-color: fade(@color--accent, 10%); 
