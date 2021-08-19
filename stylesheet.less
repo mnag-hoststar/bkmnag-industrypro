@@ -308,9 +308,12 @@ header.bk-header {
 // -----------------------------
 // Language Selector
 // -----------------------------
+
 @language-padding: 0.5em;
 @language-line-height: @font-swatch6-line-height;
+
 // General styles
+
 .language-selector {
 	&.language-selector--horizontal,
 	&.language-selector--dropdown {
@@ -348,6 +351,7 @@ header.bk-header {
 }
 
 // Inner
+
 .language-selector__inner {
 	.language-selector & {
 		box-sizing: content-box;
@@ -377,6 +381,7 @@ header.bk-header {
 }
 
 // List
+
 .language-selector__list {
 	.language-selector & {
 		z-index: 100;
@@ -403,6 +408,7 @@ header.bk-header {
 }
 
 // Item
+
 .language-selector__item {
 	.language-selector.language-selector--light &,
 	.language-selector.language-selector--dark & {
@@ -416,7 +422,9 @@ header.bk-header {
 			margin: 0 0 @language-padding @language-padding;
 		}
 	}
+
 	// Link Color
+
 	.language-selector.language-selector--horizontal & {
 		.language-selector--light& {
 			background-color: @font-swatch7-background-color;
@@ -478,6 +486,7 @@ header.bk-header {
 }
 
 // Link
+
 .language-selector__link {
 	.language-selector & {
 		box-sizing: border-box;
@@ -510,6 +519,7 @@ header.bk-header {
 }
 
 // Icon
+
 .language-selector__icon {
 	.language-selector & {
 		margin-right: 0;
@@ -529,6 +539,7 @@ header.bk-header {
 }
 
 // Name
+
 .language-selector__name,
 .language-selector__localised-name {
 	.language-selector.language-selector--flag-text & {
@@ -558,6 +569,7 @@ header.bk-header {
 // -----------------------------
 // Extended Navigation
 // -----------------------------
+
 .nav-container {
 	background-color: @color-swatch3;
 	z-index: 150;
@@ -598,13 +610,11 @@ header.bk-header {
 	margin-bottom: 5px;
 }
 
-
 /* Navigation */
 
 .extendednavigation {
 	position: relative;
 }
-
 
 /* Navbar Menu Mobile */
 
@@ -619,19 +629,13 @@ header.bk-header {
 	}
 }
 
-
-/* .navbar {
-	background-color:@color-swatch1;
-	padding: 10px 0px;
-} */
-
 .nav-column-two .widget.profile span,
 .nav-column-two .widget.profile,
 .nav-column-two .widget.profile a,
-.nav-column-two .widget.profile p,
-{
+.nav-column-two .widget.profile p {
 	color: @font-swatch9-color;
 	font-weight: @font-swatch4-font-weight;
+
 	@media @tablet {
 		float: none!important;
 		text-align: center;
@@ -778,6 +782,7 @@ header.bk-header {
 // -----------------------------
 // Feature
 // -----------------------------
+
 .feature-container {
 	padding-top: 40px;
 }
