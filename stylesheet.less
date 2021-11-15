@@ -1,14 +1,11 @@
-// -----------------------------
 // Imports
-// -----------------------------
+
 @import "@{templateCommon}/basekit-bootstrap.less";
 @import "@{templateLocal}/css/widgets.less";
 @import "@{templateLocal}/css/ecommerce.less";
 @import "@{templateLocal}/css/layout-header.less";
 
-// -----------------------------
 // Mixins
-// -----------------------------
 
 .appearance(@appearance: none) {
     -webkit-appearance: @appearance;
@@ -16,10 +13,10 @@
     appearance: @appearance;
 }
 
-// -----------------------------
 // Page Settings
-// -----------------------------
-// Wrapper 
+
+// Wrapper
+
 .page-wrap {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -149,10 +146,8 @@ blockquote {
 	}
 }
 
+// Default page sticky footer
 
-// ------------------------------------------
-// #Default page sticky footer
-// ------------------------------------------
 .bk-default {
 	display: -webkit-box;
 	display: -moz-box;
@@ -174,14 +169,14 @@ blockquote {
 	flex: 1 1 auto;
 }
 
-// -----------------------------
 // Header
-// -----------------------------
+
 header.bk-header {
 	z-index: 100;
 	background-color: @color-swatch4;
 	height: 200px;
 	position: relative;
+
 	@media @tablet {
 		height: auto;
 		min-height: 100px;
@@ -194,6 +189,7 @@ header.bk-header {
 	left: 0;
 	right: 0;
 	z-index: 9999;
+
 	@media @tablet {
 		position: relative;
 	}
@@ -208,6 +204,7 @@ header.bk-header {
 	overflow: hidden;
 	height: 100%;
 	z-index: 0;
+
 	.widget.responsiveslideshow {
 		min-height: auto;
 		position: absolute;
@@ -215,10 +212,12 @@ header.bk-header {
 		bottom: 0;
 		left: 0;
 		right: 0;
+
 		.slideshow-widget,
 		.slideshow-image-list {
 			min-height: 200px;
 			height: 200px;
+
 			@media @tablet {
 				height: 100%;
 				min-height: auto;
@@ -228,16 +227,17 @@ header.bk-header {
 				left: 0;
 				right: 0;
 			}
+
 			.crop span.inner {
 				background-size: cover;
 			}
 		}
+
 		.slideshow-widget-controls {
 			display: none;
 		}
 	}
 }
-
 
 /* COMPANY NAME */
 
@@ -252,6 +252,7 @@ header.bk-header {
 .widget.companyname a {
 	padding: 0;
 	font-weight: @font-swatch10-font-weight;
+
 	@media @mobile {
 		line-height: bkscale(@font-swatch10-line-height, 0.8);
 	}
@@ -259,6 +260,7 @@ header.bk-header {
 
 .header-left {
 	width: 70%;
+
 	@media @tablet {
 		width: 100%;
 		text-align: center;
@@ -271,6 +273,7 @@ header.bk-header {
 .header-right .widget.profile p {
 	float: right;
 	color: @font-swatch10-color;
+
 	@media @tablet {
 		float: none!important;
 	}
@@ -278,6 +281,7 @@ header.bk-header {
 
 .header-right {
 	width: 30%;
+
 	@media @tablet {
 		width: 100%;
 		text-align: center;
@@ -291,6 +295,7 @@ header.bk-header {
 .widget.logo {
 	display: block;
 	margin-right: 2px;
+
 	@media @tablet {
 		width: 100%;
 		text-align: center;
@@ -305,9 +310,7 @@ header.bk-header {
 	}
 }
 
-// -----------------------------
 // Language Selector
-// -----------------------------
 
 @language-padding: 0.5em;
 @language-line-height: @font-swatch6-line-height;
@@ -321,16 +324,20 @@ header.bk-header {
 		z-index: 200;
 		box-sizing: content-box;
 	}
+
 	&.language-selector--light {
 		background-color: @color-swatch3;
 	}
+
 	&.language-selector--dark {
 		background-color: darken(@color-swatch3, 10%);;
 	}
+
 	&.language-selector--dropdown {
 		height: auto;
 		text-align: left;
 	}
+
 	.language-selector__inner,
 	.language-selector__list,
 	.language-selector__item,
@@ -360,20 +367,24 @@ header.bk-header {
 			padding: @language-padding;
 		}
 	}
+
 	.language-selector.language-selector--horizontal & {
 		padding: @language-padding 5% 0;
 	}
+
 	.language-selector.language-selector--dropdown & {
 		&:before {
 			content: "";
 			display: block;
 			height: @language-line-height;
 		}
+
 		&:after {
 			content: "";
 			display: block;
 			height: @language-padding*2;
 		}
+
 		@media @mobile {
 			width: 100%;
 		}
@@ -387,11 +398,13 @@ header.bk-header {
 		z-index: 100;
 		min-width: auto;
 	}
+
 	.language-selector.language-selector--dropdown & {
 		box-sizing: border-box;
 		margin: @language-padding 5% @language-padding 0;
 		min-width: auto;
 		max-width: 90%;
+
 		@media @tablet {
 			margin: 0;
 			padding: @language-padding;
@@ -418,6 +431,7 @@ header.bk-header {
 		background-color: transparent;
 		width: auto;
 		max-width: 100%;
+
 		.language-selector--horizontal& {
 			margin: 0 0 @language-padding @language-padding;
 		}
@@ -428,12 +442,14 @@ header.bk-header {
 	.language-selector.language-selector--horizontal & {
 		.language-selector--light& {
 			background-color: @font-swatch7-background-color;
+
 			&:hover {
 				background-color: @font-swatch7-background-color-hover;
 			}
 		}
 		.language-selector--dark& {
 			background-color: @font-swatch6-background-color;
+
 			&:hover {
 				background-color: @font-swatch6-background-color-hover;
 			}
@@ -459,6 +475,7 @@ header.bk-header {
 			.language-selector--light&,
 			.language-selector--dark& {
 				background-color: @font-swatch7-background-color;
+
 				&:hover {
 					background-color: @font-swatch7-background-color-hover;
 				}
@@ -494,16 +511,22 @@ header.bk-header {
 		border: none;
 		hyphens: auto;
 	}
+
 	// Horizontal - Item
+
 	.language-selector.language-selector--horizontal & {
 		text-align: right;
 		display: inline-block;
 	}
+
 	// Dropdown - Item
+
 	.language-selector.language-selector--dropdown & {
 		padding-right: @language-padding*4;
 	}
+
 	// Link Color
+
 	.language-selector.language-selector--horizontal &,
 	.language-selector.language-selector--horizontal .language-selector__item--current &,
 	.language-selector.language-selector--dropdown &,
@@ -528,9 +551,11 @@ header.bk-header {
 		box-sizing: content-box;
 		line-height: @language-line-height;
 	}
+
 	.language-selector.language-selector--flag-text & {
 		margin: 0;
 	}
+
 	.language-selector.language-selector--dropdown.language-selector--flag-text & {
 		float: left;
 		box-sizing: border-box;
@@ -546,18 +571,22 @@ header.bk-header {
 		display: inline-block;
 		padding: @language-padding 0 @language-padding @language-padding;
 	}
+
 	.language-selector.language-selector--text &,
 	.language-selector.language-selector--flag & {
 		padding: @language-padding 0;
 	}
+
 	.language-selector.language-selector--text & {
 		display: block;
 	}
+
 	.language-selector.language-selector--dropdown & {
 		display: block;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+
 		.language-selector--flag-text& {
 			@media only screen and (max-width: 380px) {
 				display: none;
@@ -566,9 +595,7 @@ header.bk-header {
 	}
 }
 
-// -----------------------------
 // Extended Navigation
-// -----------------------------
 
 .nav-container {
 	background-color: @color-swatch3;
@@ -577,6 +604,7 @@ header.bk-header {
 
 .nav-container .widget.profile {
 	float: right;
+
 	@media @tablet {
 		float: none;
 		text-align: center;
@@ -588,6 +616,7 @@ header.bk-header {
 	vertical-align: middle;
 	width: 75%;
 	z-index: 150;
+
 	@media @tablet {
 		width: 100%;
 		min-height: 45px;
@@ -600,6 +629,7 @@ header.bk-header {
 	padding-top: 5px;
 	text-align: right;
 	vertical-align: middle;
+
 	@media @tablet {
 		display: block;
 		width: 100%;
@@ -656,6 +686,7 @@ header.bk-header {
 	@media @tablet {
 		padding-top: 50px;
 	}
+
 	li {
 		padding: 0;
 		border-bottom: 0;
@@ -735,6 +766,7 @@ header.bk-header {
 
 .widget .extendednavigation ul li:hover ul {
 	background-color: darken(@color-swatch3, 10%);
+
 	@media @tablet {
 		margin: 0;
 		background-color: darken(@color-swatch3, 10%);
@@ -744,6 +776,7 @@ header.bk-header {
 
 .widget .extendednavigation a.pull {
 	width: 100%;
+
 	@media @tablet {
 		z-index: 999;
 	}
@@ -768,6 +801,7 @@ header.bk-header {
 .widget.extendednavigation .bk-overlay {
 	width: 100%;
 	top: 0;
+
 	@media @tablet {
 		width: 100%!important;
 		top: -70px!important;
@@ -779,9 +813,7 @@ header.bk-header {
 	right: 15px;
 }
 
-// -----------------------------
 // Feature
-// -----------------------------
 
 .feature-container {
 	padding-top: 40px;
@@ -798,32 +830,39 @@ header.bk-header {
 	.feature-bgimg {
 		height: 400px;
 		display: table;
+
 		.content {
 			height: 100%;
 			vertical-align: top;
+
 			@media @tablet {
 				text-align: center;
 				vertical-align: middle;
 			}
+
 			.spare {
 				display: block;
 				margin: 40px 0;
+
 				@media @tablet {
 					margin: 0;
 				}
 			}
+
 			button {
 				padding: 8px 26px;
 				width: inherit;
 			}
 		}
 	}
+
 	h2 {
 		@media @mobile {
 			font-size: bkscale(@font-swatch8-font-size, 0.8);
 			line-height: bkscale(@font-swatch8-line-height, 0.8);
 		}
 	}
+
 	h3 {
 		@media @mobile {
 			font-size: bkscale(@font-swatch9-font-size, 0.8);
@@ -836,6 +875,7 @@ header.bk-header {
 .widget.feature h3,
 .feature-btn {
 	margin: 0;
+
 	@media @tablet {
 		margin: 0;
 		text-align: center;
@@ -845,18 +885,18 @@ header.bk-header {
 .widget.feature h2,
 .widget.feature h3 {
 	width: 100%;
+
 	span {
 		background-color: @color-swatch3;
 		padding: 8px 26px;
 	}
+
 	@media @tablet {
 		width: 100%;
 	}
 }
 
-// -----------------------------
 // Footer
-// -----------------------------
 
 .footer-bar {
 	background-color: darken(@color-swatch3, 10%);
@@ -887,6 +927,7 @@ footer.bk-footer {
 		font-size: (@font-swatch3-font-size * 0.6);
 		line-height: (@font-swatch3-line-height * 0.6);
 	}
+
 	@media @mobile {
 		font-size: (@font-swatch3-font-size * 0.5);
 		line-height: (@font-swatch3-line-height * 0.5);
@@ -913,6 +954,7 @@ footer.bk-footer {
 
 footer .widget.profile .bk-profile-socialicons span a {
 	background-color: @color-swatch3;
+
 	&:hover {
 		background-color: darken(@color-swatch3, 10%);
 	}
@@ -926,6 +968,7 @@ footer .widget.profile .bk-profile-socialicons span a {
 .widget.profile .bk-profile-socialicons span a {
 	text-align: center;
 	background-color: @color-swatch3;
+	
 	&:hover {
 		background-color: @font-swatch6-background-color-hover;
 	}
@@ -937,10 +980,12 @@ footer .widget.profile .bk-profile-socialicons span a {
 		color: @font-swatch1-color;
 		float: left!important;
 		padding-right: 5px;
+
 		&:after {
 			content: ",";
 			margin-left: 0;
 		}
+
 		&:last-of-type:after {
 			display: none;
 		}
@@ -969,6 +1014,7 @@ footer.bk-footer .widget.profile .bk-profile-socialicons,
 .footer-profile {
 	display: inline-block;
 	width: 100%;
+
 	@media @mobile {
 		float: none;
 	}
@@ -1030,14 +1076,13 @@ footer.bk-footer .widget.profile form {
 
 .gdpr-footer {
     background-color: darken(@color-swatch3, 10%);
+	
 	.gdpr-footer__link {
 		color: @color-swatch1;
 	}
 }
 
-// -----------------------------
 // Form
-// -----------------------------
 
 select {
 	padding-right: 2.2em;
@@ -1065,9 +1110,7 @@ select {
 	}
 }
 
-// -----------------------------
 // Form
-// -----------------------------
 
 .widget.ecomproductslist .ecom-productslist-products {
 	form.productlist-display-form {

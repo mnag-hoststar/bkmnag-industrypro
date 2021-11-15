@@ -1,18 +1,14 @@
-// -----------------------------------------------------------------
-// Responsive flex header
-// -----------------------------------------------------------------
 
+// Responsive flex header
 
 @bk-logo-right-spacing: 10px;
 @bk-header-wrapper-width: 960px;
 @bk-header-vertical-spacing: 60px;
 @bk-pull-button-height: 18px;
 
-// -----------------------------------------------------------------
 // Latest flexbox model
 
 .flex-container {
-	// Flex parent
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
@@ -46,7 +42,6 @@
 
 
 .widget.logo {
-	// Flex child
 	-webkit-box-ordinal-group: 1;
 	-moz-box-ordinal-group: 1;
 	-webkit-order: 0;
@@ -60,9 +55,7 @@
 	-webkit-align-self: auto;
 	-ms-flex-item-align: auto;
 	align-self: auto;
-
-	// Layout
-	text-align:center;
+	text-align: center;
 	margin: (@bk-header-vertical-spacing / 2) auto;
 	padding: 0 (@bk-logo-right-spacing / 2);
 	max-width: 100%;
@@ -75,9 +68,11 @@
 		margin: (@bk-header-vertical-spacing / 4) 0;
 	}
 
-	img, .logo {
+	img,
+	.logo {
 		line-height: 0;
 	}
+
 	@media @tablet {
 		display:initial;
 	}
@@ -86,7 +81,6 @@
 
 
 .widget.companyname {
-	// Flex child
 	-webkit-box-ordinal-group: 1;
 	-moz-box-ordinal-group: 1;
 	-webkit-order: 0;
@@ -101,15 +95,13 @@
 	-ms-flex-item-align: auto;
 	align-self: auto;
 
-	// layout
-	//padding: (@bk-header-vertical-spacing / 2) (@bk-logo-right-spacing / 2);
-
 	@media @tablet {
 		-webkit-order: 3;
 		-ms-flex-order: 3;
 		order: 3;
 		padding: (@bk-header-vertical-spacing / 6) (@bk-logo-right-spacing / 2);
-		}
+	}
+
 	@media @tablet {
 		display:initial;
 	}
@@ -118,7 +110,6 @@
 
 
 .header-right {
-	// Flex child
 	-webkit-box-ordinal-group: 1;
 	-moz-box-ordinal-group: 1;
 	-webkit-order: 0;
@@ -141,21 +132,18 @@
 		width: 100%;
 		min-height: @bk-pull-button-height;
 	}
+
 	@media @tablet {
 		display:initial;
 	}
 }
 
-
-
-
-// -----------------------------------------------------------------
 // Legacy flexbox model only
 
 .flexboxlegacy:not(.flexbox) {
 	.flex-container {
 		display: block;
-	} // .flex-container
+	}
 
 	.widget.logo, .widget.companyname {
 		display: inline-block;
