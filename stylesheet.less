@@ -1094,6 +1094,20 @@ footer.bk-footer .widget.profile form {
 
 // Form
 
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+	align-items: center;
+
+	&.js-recaptcha {
+		margin-bottom: 0;
+
+		> *:last-child {
+			margin-bottom: 1em;
+		}
+	}
+}
+
 select {
 	padding-right: 2.2em;
     width: 100%;
@@ -1120,7 +1134,28 @@ select {
 	}
 }
 
-// Form
+.button,
+.signupform fieldset button,
+.widget.button button,
+.widget.profile form button,
+.contactform button,
+.contactform button.btn,
+.advancedcontactform button,
+.advancedcontactform button.btn,
+.btn, .blogsearch form button,
+.checkout-order-button,
+.checkout-empty-link,
+.blog-post-more-link a,
+.widget.ecombasket .ecombasket-pull,
+.ecombasket-checkout-link,
+.widget.ecomcheckout .checkout-order-button,
+.contentgroup__link {
+	padding: 5px 25px;
+    min-height: 40px;
+    display: inline-block;
+    line-height: 30px;
+}
+
 
 .widget.ecomproductslist .ecom-productslist-products {
 	form.productlist-display-form {
