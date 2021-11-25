@@ -1156,28 +1156,108 @@ select {
     line-height: 30px;
 }
 
+// E-Commerce Form
 
-.widget.ecomproductslist .ecom-productslist-products {
-	form.productlist-display-form {
-		max-width: 800px;
+.widget.ecomproductslist {
+	.ecom-productslist-products {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
-		margin: 0 auto;
+		max-width: none;
+		margin: 0 -20px;
 
-		.form-group {
-			flex-grow: 1;
+		@media @mobile {
+			display: block;
 			margin: 0;
-			padding: 10px;
-			width: 100%/3;
+		}
 
-			&.productlist-search {
-				width: auto;
-				
-				input {
-					position: static;
+		.responsivecolumns & {
+			display: block;
+			margin: 0;
+		}
+
+		.productlist-filter {
+			margin: 0 20px;
+			width: 100%;
+
+			@media @mobile {
+				margin: 0;
+			}
+	
+			.responsivecolumns & {
+				margin: 0;
+			}
+		}
+
+		form.productlist-display-form {
+			max-width: 800px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 0 auto;
+
+			.form-group {
+				flex-grow: 1;
+				margin: 0;
+				padding: 10px;
+				width: 100%/3;
+
+				@media @mobile {
+					padding: 10px 0;
+					width: 100%;
 				}
-			} 
+
+				.responsivecolumns & {
+					padding: 10px 0;
+					width: 100%;
+				}
+
+				label {
+					text-align: left;
+				}
+
+				&.productlist-search {
+					width: auto;
+
+					label {
+						@media @mobile {
+							display: block;
+						}
+		
+						.responsivecolumns & {
+							display: block;
+						}
+					}
+					
+					input {
+						position: static;
+					}
+				} 
+			}
+		}
+	}
+
+	.ecom-productslist-product {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0 20px;
+		width: 100%/3;
+
+		@media @mobile {
+			width: 100%/2;
+		}
+
+		@media @mobile {
+			display: block;
+			width: 100%;
+			padding: 0;
+			margin-bottom: 60px;
+		}
+
+		.responsivecolumns & {
+			display: block;
+			width: 100%;
+			padding: 0;
+			margin-bottom: 60px;
 		}
 	}
 }
