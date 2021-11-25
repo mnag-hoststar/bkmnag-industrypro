@@ -239,7 +239,8 @@ header.bk-header {
 	}
 }
 
-/* COMPANY NAME */
+
+// COMPANY NAME
 
 .widget.companyname {
 	display: block;
@@ -290,7 +291,7 @@ header.bk-header {
 }
 
 
-/* LOGO */
+// LOGO
 
 .widget.logo {
 	display: block;
@@ -363,6 +364,7 @@ header.bk-header {
 	.language-selector & {
 		box-sizing: content-box;
 		padding: @language-padding 5%;
+
 		@media @tablet {
 			padding: @language-padding;
 		}
@@ -484,6 +486,7 @@ header.bk-header {
 	}
 	
 	// Current Item
+
 	&--current {
 		&:after {
 			.language-selector.language-selector--dropdown & {
@@ -512,20 +515,14 @@ header.bk-header {
 		hyphens: auto;
 	}
 
-	// Horizontal - Item
-
 	.language-selector.language-selector--horizontal & {
 		text-align: right;
 		display: inline-block;
 	}
 
-	// Dropdown - Item
-
 	.language-selector.language-selector--dropdown & {
 		padding-right: @language-padding*4;
 	}
-
-	// Link Color
 
 	.language-selector.language-selector--horizontal &,
 	.language-selector.language-selector--horizontal .language-selector__item--current &,
@@ -640,13 +637,13 @@ header.bk-header {
 	margin-bottom: 5px;
 }
 
-/* Navigation */
+// Navigation
 
 .extendednavigation {
 	position: relative;
 }
 
-/* Navbar Menu Mobile */
+// Navbar Menu Mobile
 
 .nav-container .widget .extendednavigation a.pull,
 .nav-container .widget .navigation a.pull {

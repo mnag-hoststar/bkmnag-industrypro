@@ -1,18 +1,8 @@
-
-// -------------------------------------------
-//  Migration Styles -
-//
-//  These changes allow rows to work with
-//  existing templates in BK10
-// -------------------------------------------
-
-
+//  Migration Styles
 
 // Template styling resets
-// ------------------------------------
 
 #migrated {
-
     > .page-wrap,
     .nav-container + .page-wrap {
         max-width: 100%;
@@ -28,9 +18,7 @@
     }
 }
 
-
 // Row improvments
-// ------------------------------------
 
 [id^="migrate"] .row--image-text-7a blockquote {
     padding: 12px;
@@ -57,12 +45,9 @@
     visibility: hidden;
 }
 
-
 // Re-add the reset styles
-// ------------------------------------
 
 #migrated {
-
     #page-zones__main > .widget:not([data-name="row"]),
     .widget.feature,
     [data-name="row"] .row:not(.row--width-no-padding) .row__container {
@@ -78,7 +63,7 @@
         }
 
         &:last-child {
-            margin-bottom: 20px;        // Re-add main zone bottom spacing
+            margin-bottom: 20px;
         }
     }
 
