@@ -274,7 +274,7 @@
 // Product Filter
 
 .widget.ecomproductslist .productlist-filter .productlist-display-form .form-group {
-    @media only screen and (min-width: 768px) {
+    @media @tablet {
 		margin: 10px;
 	}
 
@@ -677,7 +677,7 @@
 				padding: 0 10px;
 				text-align: left;
 
-				@media (max-width: 360px) {
+				@media @mobile-small {
 					display: none;
 				}
 			}
@@ -694,7 +694,7 @@
 		tr td {
 			border-bottom: 1px solid darken(@color-swatch1,10%);
 
-			@media (max-width: 360px) {
+			@media @mobile-small {
 				float: left;
 				display: table;
 				width: 100%;
@@ -709,7 +709,7 @@
 					padding: 20px 10px;
 				}
 
-				@media (max-width: 360px) { 
+				@media @mobile-small { 
 					padding: 20px;
 				}
 			}
@@ -722,7 +722,7 @@
 					padding: 20px 10px 10px 0;
 				}
 
-				@media (max-width: 360px) { 
+				@media @mobile-small { 
 					padding: 0 20px;
 				}
 			}
@@ -737,7 +737,7 @@
 					line-height: 16px;
 				}
 
-				@media (max-width: 360px) { 
+				@media @mobile-small { 
 					padding: 10px 20px;
 					border-left: 0;
 					border-top: 1px solid darken(@color-swatch1,10%);
@@ -788,7 +788,7 @@
 		}
 
 		tr:last-child td:first-child {
-			@media (max-width: 360px) { 
+			@media @mobile-small { 
 				display: none;
 			}
 		}
@@ -811,7 +811,7 @@
 			position: absolute;
 			right: 20px;
 
-			@media (max-width: 940px) {
+			@media @tablet-large {
 				position: relative;
 				top: 0;
 				right: 0;
@@ -831,7 +831,7 @@
 		.checkout-quantitybtn {
 			top: 45px;
 
-			@media (max-width: 940px) {
+			@media @tablet-large {
 				top: 10px;
 			}
 
@@ -984,7 +984,7 @@
 		tr td {
 			border-bottom: 1px solid darken(@color-swatch1,10%);
 			
-			@media (max-width: 360px) {
+			@media @mobile-small {
 				display: table;
 				width: 100%;
 				border-bottom: 0;
@@ -1000,7 +1000,7 @@
 			}
 
 			&:nth-child(2) {
-				@media (max-width: 530px) {
+				@media @mobile-large {
 					padding-left: 0;
 				}
 			}
@@ -1013,21 +1013,21 @@
 			// Responsive
 
 			&:nth-child(1) {
-				@media (max-width: 360px) {
+				@media @mobile-small {
 					padding-bottom: 0;
 				}
 			}
 
 			&:nth-child(2),
 			&:nth-child(3) {
-				@media (max-width: 360px) {
+				@media @mobile-small {
 					padding: 0 20px 0;
 					border-left: 0;
 				}
 			}
 
 			&:last-child {
-				@media (max-width: 360px) {
+				@media @mobile-small {
 					padding: 6px 20px;
 					margin: 20px 0 0;
 					border-bottom: 1px solid darken(@color-swatch1,10%);
@@ -1037,7 +1037,7 @@
 		}
 
 		tr:last-child td:last-child {
-			@media (max-width: 360px) {
+			@media @mobile-small {
 				border-top: 0;
 				margin-top: 0;
 				padding-top: 0;

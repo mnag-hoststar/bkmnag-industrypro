@@ -5,6 +5,10 @@
 @import "@{templateLocal}/css/ecommerce.less";
 @import "@{templateLocal}/css/layout-header.less";
 
+@tablet-large: ~"only screen and (max-width: 940px)";
+@mobile-large: ~"only screen and (max-width: 530px)";
+@mobile-small: ~"only screen and (max-width: 380px)";
+
 // Mixins
 
 .appearance(@appearance: none) {
@@ -598,7 +602,7 @@ header.bk-header {
 		text-overflow: ellipsis;
 
 		.language-selector--flag-text& {
-			@media only screen and (max-width: 380px) {
+			@media @mobile-small {
 				display: none;
 			}
 		}
@@ -660,7 +664,7 @@ header.bk-header {
 
 .nav-container .widget .extendednavigation a.pull,
 .nav-container .widget .navigation a.pull {
-	@media only screen and (max-width: 769px) {
+	@media @tablet {
 		z-index: 100;
 		position: absolute;
 		margin: 13px 0;
