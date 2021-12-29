@@ -77,6 +77,26 @@ li {
 	margin: 0;
 }
 
+// Normal Text
+
+.widget {
+	p, span, small, pre, code,
+	table, th, td,
+	ul, ol, li, .contentgroup__body,
+	&.content {
+		.style--light & {
+			color: fade(@contrast--light, 80%);
+		}
+	
+		.style--accent & {
+			color: fade(@contrast--accent, 80%);
+		}
+	
+		.style--dark & {
+			color: fade(@contrast--dark, 80%);
+		}
+	}
+}
 
 // Link
 
@@ -112,6 +132,50 @@ label:not(.clicktocall__label) {
         color: fade(@contrast--dark, 80%);
     }
 }
+
+// Preformatted and Code Text
+
+pre, code {
+	display: block;
+	margin: 1em 0;
+	padding: 0.5em 1em;
+	border: none;
+	.border-radius(0);
+	background-color: darken(@color-swatch1, 10%);
+	overflow: auto;
+	.paragraph;
+	font-family: monospace;
+
+	.style--light & {
+		background-color: darken(@color--light, 10%);
+	}
+
+	.style--accent & {
+		background-color: lighten(@color--accent, 10%);
+	}
+
+	.style--dark & {
+		background-color: lighten(@color--dark, 10%);
+	}
+}
+
+code {
+	border-left: 1px solid @color-swatch5;
+
+	.style--light & {
+		border-color: @color--accent;
+	}
+
+	.style--accent & {
+		border-color: @contrast--accent;
+	}
+
+	.style--dark & {
+		border-color: @color--accent;
+	}
+}
+
+// Blockquote
 
 blockquote {
 	background-color: fade(@color-swatch3, 5%);
