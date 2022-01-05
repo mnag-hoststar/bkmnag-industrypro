@@ -1491,7 +1491,7 @@ select {
     line-height: 30px;
 }
 
-// Radiobuttons and Checkboxes
+// RADIOBUTTONS AND CHECKBOXES
 
 .widget .form .option-list {
 	margin-top: 1em;
@@ -1660,6 +1660,42 @@ footer.bk-footer .widget.profile .form-group.profile__form-group.profile__form-g
 	label[for*="input--terms"] span a.form__link {
 		text-decoration: underline;
 		border: none;
+	}
+}
+
+// REGISTERATION FORM
+
+.widget.userregistration {
+	fieldset {
+		margin: 0 auto;
+		padding: 0;
+		border: none;
+		max-width: 400px;
+		
+		@media @mobile {
+			max-width: none;
+		}
+
+		.responsivecolumns & {
+			max-width: none;
+		}
+
+		input {
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		.error {
+			padding: 20px 0 0;
+
+			&[style*="display: block"] {
+				padding: 20px 0;
+			}
+
+			&[style*="display: none"] {
+				display: block !important;
+			}
+		}
 	}
 }
 
