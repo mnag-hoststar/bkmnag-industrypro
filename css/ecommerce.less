@@ -462,127 +462,143 @@
 
 // Single Product
 
-.widget.ecomproduct .ecom-product {
+.widget.ecomproduct {
+	.ecom-product {
+		// Product Info
 
-	// Product Info
-
-	.ecom-product-vartitle,
-	.ecom-product-category,
-	.ecom-product-tag {
-		font-family: @font-swatch4-font-family;
-		font-size: 15px;
-		font-weight: @font-swatch4-font-weight;
-		line-height: @font-swatch4-line-height;
-		letter-spacing: @font-swatch4-letter-spacing;
-		color: @font-swatch4-color;
-	}
-
-	// Price
-
-	.ecom-product-price {
-		color: @color-swatch2;
-		font-size: 20px;
-	}
-
-	.ecom-product-variation {
-		padding: 4px 0;
-		margin-top: 10px;
-		border-top: 1px solid darken(@color-swatch1,10%);
-		border-bottom: 1px solid darken(@color-swatch1,10%);
-	}
-
-	// Select
-
-	.ecom-product-info .ecom-product-variation select {
-		display: block;
-		width: 100%;
-    	height: 40px;
-    	margin-bottom: 12px;
-        border: 1px solid fade(@color-swatch3, 15%);
-        background-color: @color-swatch1;
-        cursor: pointer;
-
-        &:focus {
-			outline: 0;
-        }
-
-        @media @mobile {
-            width: 100%;
-        }
-
-	    &::-ms-expand {
-	        display: none;
-	    }
-
-	    &[name="displayCount"] {
-	        margin-bottom: 0;
-	    }
-	}
-
-	.btn {
-	    margin: 20px 20px 0 0;
-	}
-
-	// Add to Cart Button
-
-	.btn.ecom-product-add-to-cart-btn {
-		background-image: image('/images/ic-basket.png');
-		background-repeat: no-repeat;
-	    background-position: top 12px left 10px;
-	    background-size: 21px;
-	    padding: 10px 15px 10px 20px;
-
-	    &:hover {
-	    	text-decoration: none!important;
-	    }
-
-		.text:before {
-			margin: 0;
-			background-image: none;
+		.ecom-product-vartitle,
+		.ecom-product-category,
+		.ecom-product-tag {
+			font-family: @font-swatch4-font-family;
+			font-size: 15px;
+			font-weight: @font-swatch4-font-weight;
+			line-height: @font-swatch4-line-height;
+			letter-spacing: @font-swatch4-letter-spacing;
+			color: @font-swatch4-color;
 		}
 
-		// Added
+		// Price
 
-		&.added {
-			background-image: image('/images/ic-tick.svg');
-			background-color: @color-swatch2;
-			background-size: 20px;
-			box-shadow: none;
+		.ecom-product-price {
+			color: @color-swatch2;
+			font-size: 20px;
+		}
 
-			&:hover {
-				color: @color-swatch4;
+		.ecom-product-variation {
+			padding: 4px 0;
+			margin-top: 10px;
+			border-top: 1px solid darken(@color-swatch1,10%);
+			border-bottom: 1px solid darken(@color-swatch1,10%);
+		}
+
+		// Select
+
+		.ecom-product-info .ecom-product-variation select {
+			display: block;
+			width: 100%;
+			height: 40px;
+			margin-bottom: 12px;
+			border: 1px solid fade(@color-swatch3, 15%);
+			background-color: @color-swatch1;
+			cursor: pointer;
+
+			&:focus {
+				outline: 0;
+			}
+
+			@media @mobile {
+				width: 100%;
+			}
+
+			&::-ms-expand {
+				display: none;
+			}
+
+			&[name="displayCount"] {
+				margin-bottom: 0;
 			}
 		}
+
+		.btn {
+			margin: 20px 20px 0 0;
+		}
+
+		// Add to Cart Button
+
+		.btn.ecom-product-add-to-cart-btn {
+			background-image: image('/images/ic-basket.png');
+			background-repeat: no-repeat;
+			background-position: top 12px left 10px;
+			background-size: 21px;
+			padding: 10px 15px 10px 20px;
+
+			&:hover {
+				text-decoration: none!important;
+			}
+
+			.text:before {
+				margin: 0;
+				background-image: none;
+			}
+
+			// Added
+
+			&.added {
+				background-image: image('/images/ic-tick.svg');
+				background-color: @color-swatch2;
+				background-size: 20px;
+				box-shadow: none;
+
+				&:hover {
+					color: @color-swatch4;
+				}
+			}
+		}
+
+		// Product Category Info
+
+		.ecom-product-category {
+			position: relative;
+			line-height: 22px;
+		}
+
+		.ecom-product-cattag {
+			margin: 10px 0 20px;
+		}
+
+		// Category Separation
+
+		.ecom-product-tag-link:after {
+			content: ',';
+		}
+
+		.ecom-product-tag-link:last-child:after {
+			display: none;
+		}
+
+		// Product Description
+
+		.ecom-product-long-description {
+			padding: 20px 0;
+			margin-bottom: 30px;
+			border-top: 1px solid darken(@color-swatch1,10%);
+			border-bottom: 1px solid darken(@color-swatch1,10%);
+		}
 	}
 
-	// Product Category Info
+	.product-actions {
+		button {
+			margin-bottom: 1em;
+			text-align: center;
+        
+			@media @mobile {
+				width: 100%;
+			}
 
-	.ecom-product-category {
-		position: relative;
-		line-height: 22px;
-	}
-
-	.ecom-product-cattag {
-		margin: 10px 0 20px;
-	}
-
-	// Category Separation
-
-	.ecom-product-tag-link:after {
-		content: ',';
-	}
-
-	.ecom-product-tag-link:last-child:after {
-		display: none;
-	}
-
-	// Product Description
-
-	.ecom-product-long-description {
-		padding: 20px 0;
-		margin-bottom: 30px;
-		border-top: 1px solid darken(@color-swatch1,10%);
-		border-bottom: 1px solid darken(@color-swatch1,10%);
+			&:before {
+				float: none;
+			}
+		}
 	}
 }
 
