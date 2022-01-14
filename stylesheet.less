@@ -79,11 +79,13 @@ li {
 
 // Normal Text
 
-.widget {
+.widget, .widget.in-editing {
 	p, span, small, pre, code,
 	table, th, td,
 	ul, ol, li, .contentgroup__body,
-	&.content {
+	.content {
+		color: @font-swatch5-color;
+		
 		.style--light & {
 			color: fade(@contrast--light, 80%);
 		}
@@ -96,6 +98,12 @@ li {
 			color: fade(@contrast--dark, 80%);
 		}
 	}
+}
+
+.widget .content,
+.widget.in-editing .content {
+	font-size: @font-swatch5-font-size !important;
+	line-height: @font-swatch5-line-height !important;
 }
 
 // Link
