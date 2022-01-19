@@ -83,31 +83,30 @@ li {
 
 // Normal Text
 
-.widget, .widget.in-editing {
-	p, span, small, pre, code,
-	table, th, td,
-	ul, ol, li, .contentgroup__body,
-	.content {
-		color: @font-swatch5-color;
+.widget.content,
+.widget.content.in-editing {
+	.wysihtml-editor-content,
+	.embed-content {
+		font-size: @font-swatch5-font-size !important;
+		line-height: @font-swatch5-line-height !important;
+	
+		&, p, span, small, pre, code,
+		table, th, td {
+			color: @font-swatch5-color;
 		
-		.style--light & {
-			color: fade(@contrast--light, 80%);
-		}
-	
-		.style--accent & {
-			color: fade(@contrast--accent, 80%);
-		}
-	
-		.style--dark & {
-			color: fade(@contrast--dark, 80%);
+			.style--light & {
+				color: @contrast--light;
+			}
+		
+			.style--accent & {
+				color: @contrast--accent;
+			}
+		
+			.style--dark & {
+				color: @contrast--dark;
+			}
 		}
 	}
-}
-
-.widget .content,
-.widget.in-editing .content {
-	font-size: @font-swatch5-font-size !important;
-	line-height: @font-swatch5-line-height !important;
 }
 
 // Link
