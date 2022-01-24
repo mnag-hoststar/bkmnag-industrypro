@@ -971,92 +971,21 @@ header.bk-header {
 .widget .extendednavigation {
 	.clearfix;
 
-	ul {
+	&.js-extendednavigation {
+		.clearfix;
+	}
+
+	.bk-overlay {
+		width: 100%;
+		top: 0;
+
 		@media @tablet {
-			padding-top: 50px;
-		}
-
-		li {
-			padding: 0;
-			border-bottom: 0;
-
-			a span.text {
-				@media @tablet {
-					padding: 0;
-					border: 0;
-				}
-			}
-
-			&.folder {
-				margin: 0;
-			
-				ul li a {
-					padding: 10px 20px;
-
-					span.text {
-						padding-right: 0px;
-					}
-				}
-	
-				&:after {
-					display: none;
-					right: 15px;
-					border-top-color: @font-swatch6-color;
-					border-top-color: @color-swatch1;
-				}
-
-				> .text {
-					padding: 12px 1.5em 12px 25px;
-					position: relative;
-	
-					&:after {
-						content: " ";
-						display: inline-block;
-						position: absolute;
-						top: 48%;
-						right: 0.5em;
-						border: 0.2em solid;
-						border-color: transparent;
-						border-top-color: @color-swatch1;
-					}
-				}
-			}
-
-			a:hover,
-			&.folder .text:hover {
-				text-decoration: none;
-				color: @font-swatch6-color;
-				background-color: @font-swatch6-background-color-hover;
-			}
-		
-			&:hover ul {
-				background-color: darken(@color-swatch3, 10%);
-		
-				@media @tablet {
-					margin: 0;
-					background-color: darken(@color-swatch3, 10%);
-					right: 0;
-				}
-			}
+			width: 100%!important;
+			top: -70px!important;
 		}
 	}
 
-	> ul > li > a,
-	ul li.folder>.text {
-		padding: 12px 25px;
-	}
-
-	ul.align-center li.folder>.text {
-		@media @tablet {
-			padding: 13px 1.5em 10px;
-		}
-	}
-
-	ul.align-right li.folder::after {
-		@media @tablet {
-			right: 22px;
-		}
-	}
+	// Mobile Menu
 
 	a.pull {
 		width: 100%;
@@ -1074,17 +1003,114 @@ header.bk-header {
 		}
 	}
 
-	&.js-extendednavigation {
-		.clearfix;
+	// Menu Points
+
+	ul {
+		@media @tablet {
+			padding-top: 50px;
+		}
+
+		li {
+			padding: 0;
+			border-bottom: 0;
+
+			a span.text {
+				@media @tablet {
+					padding: 0;
+					border: 0;
+				}
+			}
+
+			a,
+			&.folder .text {
+				padding: 12px 25px;
+
+				&:hover {
+					text-decoration: none;
+					color: @font-swatch6-color;
+					background-color: @font-swatch6-background-color-hover;
+				}
+			}
+
+			// Folder
+
+			&.folder {
+				margin: 0;
+	
+				&:after {
+					content: none;
+				}
+					
+				> .text {
+					padding: 12px 1.5em 12px 25px;
+					position: relative;
+
+					// Folder Arrow
+
+					&:after {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 50%;
+						right: 0.5em;
+						border: 2px solid fade(@font-swatch6-color, 60%);
+						border-top: transparent;
+						border-left: transparent;
+						transform: rotate(45deg);
+						margin-top: -0.5em;
+						width: 0.5em;
+						height: 0.5em;
+					}
+				
+					&:hover:after {
+						border-color: @font-swatch6-color-hover;
+					}
+				}
+
+				// Dropdown
+
+				> ul,
+				&:hover > ul {
+					background-color: darken(@color-swatch3, 10%);
+			
+					@media @tablet {
+						margin: 0;
+						background-color: darken(@color-swatch3, 10%);
+						right: 0;
+					}
+
+					li a {
+						padding: 10px 20px;
+
+						span.text {
+							padding-right: 0px;
+						}
+					}
+				}
+	
+				// Folder Open
+		
+				&.folder-open ul,
+				&.folder-open:hover ul {
+					display: block;
+    
+					@media @tablet {
+						display: block;
+					}
+				}
+			}
+		}
 	}
 
-	.bk-overlay {
-		width: 100%;
-		top: 0;
-
+	ul.align-center li.folder > .text {
 		@media @tablet {
-			width: 100%!important;
-			top: -70px!important;
+			padding: 13px 1.5em 10px;
+		}
+	}
+
+	ul.align-right li.folder:after {
+		@media @tablet {
+			right: 22px;
 		}
 	}
 }
@@ -1422,7 +1448,7 @@ footer.bk-footer .widget.profile form {
 	}
 }
 
-// Form
+// FORM
 
 .form-group {
     display: flex;
@@ -1437,6 +1463,8 @@ footer.bk-footer .widget.profile form {
 		}
 	}
 }
+
+// Dropdown
 
 select {
 	padding-right: 2.2em;
