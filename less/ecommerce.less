@@ -103,10 +103,6 @@
 			margin: 0;
 		}
 
-		label {
-
-		}
-
         .productlist-display-form {
 			display: flex;
 			flex-wrap: wrap;
@@ -589,31 +585,47 @@
 		// Add to Cart Button
 
 		.btn.ecom-product-add-to-cart-btn {
-			background-image: image('/images/ic-basket.png');
-			background-repeat: no-repeat;
-			background-position: top 12px left 10px;
-			background-size: 21px;
-			padding: 10px 15px 10px 20px;
+			padding: 10px 15px;
 
 			&:hover {
 				text-decoration: none!important;
 			}
 
 			.text:before {
-				margin: 0;
+				content: '\f291';
+				display: inline-block;
+				top: 0;
+				margin-top: -0.25em;
+				margin-right: 0.5em;
 				background-image: none;
+				height: 1.5em;
+				width: 1.5em;
+				font-family: 'FontAwesome';
+				text-indent: 0;
+				font-size: 1.25em;
 			}
 
 			// Added
 
 			&.added {
-				background-image: image('/images/ic-tick.svg');
-				background-color: @color-swatch2;
-				background-size: 20px;
 				box-shadow: none;
 
 				&:hover {
 					color: @color-swatch4;
+				}
+
+				.text:before {
+					content: '\f00c';
+					display: inline-block;
+					top: 0;
+					margin-top: -0.25em;
+					margin-right: 0.5em;
+					background-image: none;
+					height: 1.5em;
+					width: 1.5em;
+					font-family: 'FontAwesome';
+					text-indent: 0;
+					font-size: 1.25em;
 				}
 			}
 		}
@@ -938,35 +950,6 @@
 }
 
 // Basket
-
-.widget.ecombasket {
-	.ecombasket-pull {
-		padding: 12px 14px 12px 36px;
-		background-image: image('/images/ic-basket.png');
-		background-repeat: no-repeat;
-		background-position: 12% 48%;
-		background-size: 21px;
-		background-color: @font-swatch7-background-color;
-
-		&:hover {
-			background-color: @font-swatch7-background-color-hover;
-		}
-	
-		p,
-		.basket-count {
-			color: @font-swatch9-color!important;
-	
-			&:hover {
-				color: @font-swatch9-color!important;
-			}
-		}
-		
-		p {
-			font-family: @font-swatch7-font-family;
-			font-size: @font-swatch7-font-size;
-		}
-	}
-}
 
 .ecombasket-total-wrap,
 .ecombasket-summary-wrap {

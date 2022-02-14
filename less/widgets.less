@@ -4,6 +4,10 @@
 
 .widget.image {
 	margin: 0 0 10px;
+    
+	a:hover {
+		text-decoration: none;
+	}
 
 	span.image-title,
 	span.image-description {
@@ -184,6 +188,8 @@ label, .label,
 .advancedcontactform label {
 	font-size: @font-swatch5-font-size;
 	line-height: @font-swatch5-line-height;
+    word-break: break-word;
+    margin-bottom: 0.5em;
 
     .style--light & {
         color: @contrast--light;
@@ -241,7 +247,7 @@ label, .label,
 		min-width: auto;
 		height: auto !important;
 		width: auto !important;
-		opacity: 1;
+		opacity: 0;
 	}
 	
 	label {
@@ -278,19 +284,23 @@ label, .label,
 .btn,
 button.btn,
 button.button,
+.contactform button,
+.contactform button.btn,
+.advancedcontactform button,
+.advancedcontactform button.btn,
 .widget.tweet a,
-.widget.dropbox button,
-.widget.profile form button,
-.widget.paypalbuynow .widget.button.paypal,
 .widget.clicktocall a,
+.widget.dropbox button,
+.widget.filedownload button.btn,
+.widget.paypalbuynow .widget.button.paypal,
+.widget.socialicons span a,
+footer.bk-footer .widget.profile .bk-profile-socialicons span a,
 .widget.feature .feature-bgimg .content button,
 .userregistration fieldset .userregistrationbtn,
-.widget.socialicons span a,
 .widget.yelpreview .review-body .review-link a,
-.blog-post-more-link a,
 form.blog-search-form .form-group button,
-a.contentgroup__link {
-	padding: 12px 20px 12px 40px;
+.blog-post-more-link a {
+    display: inline-block;
 	background-color: @font-swatch7-background-color;
 	font-family: @font-swatch7-font-family;
 	font-weight: @font-swatch6-font-weight;
@@ -298,8 +308,10 @@ a.contentgroup__link {
 	letter-spacing: @font-swatch7-letter-spacing;
 	font-size: @font-swatch7-font-size; 
     color: @font-swatch7-color;
-    padding: 0 30px;
+	text-decoration: none;
+	padding: 5px 25px;
     height: 40px;
+    min-height: 40px;
     border: 0;
 
     .style--light & {
@@ -319,19 +331,23 @@ a.contentgroup__link {
 
 	&:hover {
 		background-color:@font-swatch7-background-color-hover;
+		color: @font-swatch7-color;
 		text-decoration: none;
 
-        .style--light & {
-            background-color: darken(@color--accent, 10%);
-        }
+		.style--light & {
+			background-color: darken(@color--accent, 10%);
+			color: @contrast--accent;
+		}
 
-        .style--accent & {
-            background-color: darken(@color--dark, 10%);
-        }
+		.style--accent & {
+			background-color: darken(@color--dark, 10%);
+			color: @contrast--dark;
+		}
 
-        .style--dark & {
-            background-color: darken(@color--accent, 10%);
-        }
+		.style--dark & {
+			background-color: darken(@color--accent, 10%);
+			color: @contrast--accent;
+		}
 	}
 
 	@media @mobile {
@@ -352,27 +368,78 @@ a.contentgroup__link {
 
 	.style--dark & {
 		color: @contrast--accent;
-	} 
+	}
 }
 
 // Image Buttons
 
 .widget.tweet a,
+.widget.clicktocall a,
 .widget.dropbox button,
-.widget.paypalbuynow .widget.button.paypal,
-.widget.filedownload button,
-.widget.clicktocall a {
-    &, &:hover, &:focus {
-        background-repeat: no-repeat;
-        background-position: 1em;
-        background-size: 1.5em;
-        padding-left: 3.5em;
-    }
+.widget.filedownload button.btn {
+	&, &:hover, &:focus {
+		background-image: none;
+	}
 }
 
-.widget.clicktocall a {
-	&, &:hover, &:focus {
-		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpENTg4MDkxNUI0RDcxMUUyOUZDMDhBQzY4M0VGNzM1QiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpENTg4MDkxNkI0RDcxMUUyOUZDMDhBQzY4M0VGNzM1QiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjYxMkE4MzU2QjRCQjExRTI5RkMwOEFDNjgzRUY3MzVCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQ1ODgwOTE0QjRENzExRTI5RkMwOEFDNjgzRUY3MzVCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+s2QrvwAAAPxJREFUeNpi/P//PwM1ARMDlQE2A7uAGOTsHWSZCPIyFHMC8cz/qMASSZ4ojOzCCUCchmafOyVeVsIiHwXE7OQa+BaLPC8Uk2XgdiD+icR/DMS2QPyG3EhhAeIFSBEyk9QIAadpNAFDJAP/ArE+pQaCcDOSoSepYSAIH0EydCuaHCMQ8wIxEykGigHxPSRDzwOxGlQuDIi/AfExIG4BYn8gFiBkIAjLAfFjJEM/AfFGIH7zHxMcAGJ1QgaCsDAQn/hPGDwCYhdiDIThRgIGNhPjZXSsAsQLockJGUxHVsdIYgELylmJQOwHxPxAfAGIa4D4C0wB46AvsQECDAB0BaRrDCyrSQAAAABJRU5ErkJggg==);
+.widget.tweet a,
+.widget.clicktocall a,
+.widget.dropbox button span,
+.widget.filedownload button.btn {
+	&:before {
+		float: left;
+		padding-right: 0.5em;
+		background-image: none;
+		font-family:'FontAwesome';
+		font-size: 1.5em;
+	}
+}
+
+.widget.tweet a:before {content: '\f099';}
+.widget.clicktocall a:before {content: '\f095';}
+.widget.dropbox button span:before {content: '\f16b';}
+.widget.filedownload button.btn:before {content: '\f019';}
+
+.widget.paypalbuynow .widget.button.paypal {
+	padding-left: 3.2em;
+    background-size: 1.2em;
+    background-position: 1.25em center;
+}
+
+// Social Icons
+
+.widget.socialicons,
+footer.bk-footer .widget.profile .bk-profile-socialicons {
+	span {
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-image: none;
+			margin: 0 5px 10px;
+			padding: 0;
+			width: 45px;
+			height: 45px;
+			min-height: 45px;
+			text-indent: 0;
+			font-size: 0;
+
+			&:before {
+				font-family: 'FontAwesome';
+				text-indent: 0;
+				font-size: 24px;
+			}
+		}
+
+		&.bk-socialicons-linkedin a:before {content: '\f0e1';}
+		&.bk-socialicons-twitter a:before {content: '\f099';}
+		&.bk-socialicons-instagram a:before {content: '\f16d';}
+		&.bk-socialicons-pinterest a:before {content: '\f0d2';}
+		&.bk-socialicons-facebook a:before {content: '\f09a';}
+		&.bk-socialicons-rss a:before {content: '\f09e';}
+		&.bk-socialicons-vkontakte a:before {content: '\f189';}
+		&.bk-socialicons-xing a:before {content: '\f168';}
+		&.bk-socialicons-youtube a:before {content: '\f16a';}
 	}
 }
 
@@ -497,38 +564,6 @@ a.contentgroup__link {
 }
 
 // Link
-
-.blog-list-footer a {
-	background-position: top 11px right 5px;
-	background-size: 15px;
-	color: @font-swatch7-color;
-	font-family: @font-swatch7-font-family;
-	font-size: @font-swatch7-font-size;
-	font-weight: @font-swatch7-font-weight;
-	line-height: @font-swatch7-line-height;
-	letter-spacing: @font-swatch7-letter-spacing;
-	background-color:transparent;
-    padding:0;
-    background-image: image('/images/button-arrow.png');
-	background-repeat: no-repeat;
-
-    .style--light & {
-        color: @contrast--light;
-    }
-
-    .style--accent & {
-        color: @contrast--dark;
-    }
-
-    .style--dark & {
-        color: @contrast--dark;
-    }
-
-	&:hover {
-		background-color:transparent!important;
-		text-decoration: underline!important;
-	}
-}
 
 .blog-post-more-link a {
 	padding: 10px 30px;
@@ -1242,53 +1277,6 @@ a.contentgroup__link {
 
     .style--dark & {
         background-color: @color--dark;
-    }
-}
-
-// Social Icons
-
-.widget.socialicons, .widget.profile .bk-profile-socialicons {
-    min-height: 32px;
-}
-
-.widget.profile .bk-profile-socialicons span {
-	display:inline-table;
-}
-
-.widget.socialicons span a {
-    .style--light & {
-        background-color: @color--accent;
-        color: @contrast--accent;
-    }
-
-    .style--accent & {
-        background-color: @color--dark;
-        color: @contrast--dark;
-    }
-
-    .style--dark & {
-        background-color: @color--accent;
-        color: @contrast--accent;
-    }
-
-    &:hover {
-        .style--light & {
-            background-color: darken(@color--accent, 10%);
-        }
-
-        .style--accent & {
-            background-color: darken(@color--dark, 10%);
-        }
-
-        .style--dark & {
-            background-color: darken(@color--accent, 10%);
-        }
-    }
-}
-
-.bk-profile-socialicons span {
-	@media @tablet {
-		width:0!important;
     }
 }
 
