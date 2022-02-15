@@ -649,12 +649,12 @@ footer.bk-footer .widget.profile .bk-profile-socialicons {
 
 // Slideshow
 
-.widget.responsiveslideshow .content-wrapper {
-	background-color:@color-swatch3;
-	opacity: 0.9;
-}
-
 .widget.responsiveslideshow {
+    .content-wrapper {
+        background-color:@color-swatch3;
+        opacity: 0.9;
+    }
+
     .slideshow-image-list,
     .slideshow-widget {
         min-height: 550px;
@@ -790,198 +790,38 @@ footer.bk-footer .widget.profile .bk-profile-socialicons {
             }
         }
     }
-}
 
-.widget.responsiveslideshow .title {
-	padding:10px 10px 0px 10px;
-	width:100%;
-
-	@media @tablet {
-		font-size:bkscale(@font-swatch8-font-size, 0.6);
-		line-height:bkscale(@font-swatch8-line-height, 0.8);
-	}
-
-	@media @mobile {
-		font-size:bkscale(@font-swatch8-font-size, 0.5);
-		line-height:bkscale(@font-swatch8-line-height, 0.8);
-		padding-bottom:0;
-	}
-}
-
-.widget.responsiveslideshow .description { 
-	padding:0px 10px 10px 10px;
-	width:100%;
-
-	@media @tablet {
-		font-size:bkscale(@font-swatch9-font-size, 0.6);
-		line-height:bkscale(@font-swatch9-line-height, 0.8);
-		padding-bottom: 5px;
-	}
-
-	@media @mobile {
-		font-size:bkscale(@font-swatch9-font-size, 0.5);
-		line-height:bkscale(@font-swatch9-line-height, 0.5);
-	}
-}
-
-// Menu
-
-.widget.menusections {
-	ul {
-		text-align: center;
-
-		li {
-		    background-color: @font-swatch7-background-color;
-		    padding: 0 10px;
-		    cursor: pointer;
-
-		    &:hover {
-		        background-color: @font-swatch7-background-color-hover;
-		    }
-
-			@media @mobile {
-				width: 80%;
-				margin: 10px 0;
-			}
-		}
-	}
-
-	a {
-		color: @font-swatch6-color;
-
-		&:hover {
-			text-decoration: none;
-		}
-	}
-}
-
-.menu .menu-items li {
-	padding: 20px;
-}
-
-.widget.menu .menu-items {
-	column-gap: 20px;
-}
-
-// Main Menu
-
-.widget.menu {
-	.main.wrapper {
-		width: 100%;
-		margin: 0 0 2em;
-	}
+    .title {
+        padding:10px 10px 0px 10px;
+        width:100%;
     
-	.menu-name,
-	.menu-description,
-	.menu-note,
-	.menu-subsection-name,
-	.menu-subsection-description {
-		text-align: center;
-		padding-bottom: 0;
-	}
-
-	.menu-subsection {
-		padding: 0;
-	}
-
-	.menu-subsection-header {
-		margin: 10px 0 25px;
-	}
-
-	.menu-item-image-wrap {
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 180px;
-		background-position: center;
-
-		img {
-			display: none;
-		}
-	}
-
-	.menu-name {
-		@media @mobile {
-			font-size: bkscale(@font-swatch1-font-size, 0.75);
-		}
-	}
-
-	.menu-subsection-name {
-		@media @mobile {
-			font-size: bkscale(@font-swatch2-font-size, 0.8);
-		}
-	}
-}
-
-.menu-header {
-	margin-bottom:20px;
-	padding: 10px 0px;
-}
-
-// Promoted Item
-
-.menu .menu-items li.menu-item-promoted,
-.menu-subsection-promoted {
-	padding: 20px;
-	background-color: fade(@color-swatch2, 5%);
-	border-left: 1px solid fade(@color-swatch2, 50%);
-}
-
-.menu-item-promoted {
-    background-color: fade(@color-swatch2, 5%);
-}
-
-.menu-subsection-wrapper.menu-subsection-promoted {
-    background-color: fade(@color-swatch2, 5%);
-    padding: 20px;
-    margin: 20px;
-}
-
-.menu-subsection-promoted .menu-items li {
-	margin: 0;
-}
-
-.menu-subsection .menu-items li {
-	margin:0;
-}
-
-// Nutritional Info
-
-.menu-item-nutritional-title {
-    font-size: @font-swatch5-font-size;
-    line-height: bkscale(@font-swatch4-line-height,0.8);
-    text-transform: uppercase;
-}
-
-.menu-item-nutritional-prop {
-	font-size: bkscale(@font-swatch5-font-size,0.8);
-	line-height: bkscale(@font-swatch5-line-height,0.8);
-	margin-bottom: 10px;
-}
-
-// Price
-
-.standard-price {
-	color: @color-swatch2;
-	font-family: @font-swatch4-font-family;
-	font-size: @font-swatch5-font-size;
-	font-weight: @font-swatch4-font-weight;
-	line-height: @font-swatch4-line-height;
-	letter-spacing: @font-swatch4-letter-spacing;
-}
-
-// Dietary Icons
-
-.menu .menu-section-item-dietary-props .dietary-icon {
-	text-transform: uppercase;
-	padding: 0 5px;
-	background-color: @color-swatch3;
-	border: 0;
-	color: @font-swatch7-color;
-	font-family: @font-swatch7-font-family;
-	font-size: bkscale(@font-swatch5-font-size, 0.7);
-	font-weight: @font-swatch5-font-weight;
-	line-height: @font-swatch7-line-height;
-	letter-spacing: @font-swatch7-letter-spacing;
+        @media @tablet {
+            font-size:bkscale(@font-swatch8-font-size, 0.6);
+            line-height:bkscale(@font-swatch8-line-height, 0.8);
+        }
+    
+        @media @mobile {
+            font-size:bkscale(@font-swatch8-font-size, 0.5);
+            line-height:bkscale(@font-swatch8-line-height, 0.8);
+            padding-bottom:0;
+        }
+    }
+    
+    .description { 
+        padding:0px 10px 10px 10px;
+        width:100%;
+    
+        @media @tablet {
+            font-size:bkscale(@font-swatch9-font-size, 0.6);
+            line-height:bkscale(@font-swatch9-line-height, 0.8);
+            padding-bottom: 5px;
+        }
+    
+        @media @mobile {
+            font-size:bkscale(@font-swatch9-font-size, 0.5);
+            line-height:bkscale(@font-swatch9-line-height, 0.5);
+        }
+    }
 }
 
 // Blog
