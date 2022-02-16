@@ -39,10 +39,6 @@
 
 			a,
 			a span {
-				.style--light & {
-					color: @contrast--light;
-				}
-			
 				.style--accent & {
 					color: @contrast--accent;
 				}
@@ -260,11 +256,11 @@
 	background-position: center;
 	margin-bottom: 20px;
 	margin-bottom: 1em;
-	background-color: darken(@color-swatch1,3%);
+	background-color: darken(@color-swatch1, 3%);
 	background-position: center;
 
 	.style--light & {
-		background-color: darken(@color--light, 3%);
+		background-color: darken(@color-swatch1, 3%);
 	}
 
 	.style--accent & {
@@ -297,18 +293,6 @@
 	font-size: @font-swatch4-font-size;
 	line-height: @font-swatch4-line-height;
 	font-weight: normal;
-
-    .style--light & {
-        color: @contrast--light;
-    }
-
-    .style--accent & {
-        color: @contrast--accent;
-    }
-
-    .style--dark & {
-        color: @contrast--dark;
-    }
 }
 
 // Product Price
@@ -322,7 +306,7 @@
 	color: @font-swatch1-color;
 
     .style--light & {
-        color: @contrast--light;
+        color: @font-swatch1-color;
     }
 
     .style--accent & {
