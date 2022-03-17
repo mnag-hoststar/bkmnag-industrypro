@@ -209,8 +209,6 @@
     }
 }
 
-
-
 // Product Item
 
 .widget.ecomproductslist .ecom-productslist-products .ecom-productslist-product,
@@ -540,7 +538,15 @@
 		.ecom-product-vartitle,
 		.ecom-product-category,
 		.ecom-product-tag {
+			display: flex;
+			flex-wrap: wrap;
 			font-weight: bold;
+
+			&:after {
+				content: ':\00a0';
+				order: 0;
+				display: inline-block;
+			}
 		}
 
 		// Category Separation
@@ -548,9 +554,10 @@
 		.store-category-link,
 		.ecom-product-tag-link {
 			font-weight: normal;
+			order: 1;
 
 			&:after {
-				content: ',';
+				content: ',\00a0';
 			}
 
 			&:last-child:after {

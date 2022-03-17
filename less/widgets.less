@@ -782,45 +782,9 @@ form.blog-search-form .form-group button,
         }
     }
 
+    // Arrows
+
     .slideshow-widget {
-        .btn-prev,
-        .btn-next {
-            top: 50%;
-            margin-top: -22px;
-        }
-        
-        .btns-move {
-            .btn-prev {
-                left: 0;
-                background: @color-swatch1;
-                padding: 10px 20px;
-
-                @media @tablet {
-                    padding: 10px 20px;
-                }
-
-                @media @mobile {
-                    padding: 10px 20px;
-                }
-            }
-            
-            .btn-next {
-                right: 0;
-                background: @color-swatch1;
-                padding: 10px 20px;
-
-                @media @tablet {
-                    padding: 10px 20px;
-                }
-                
-                @media @mobile {
-                    padding: 10px 20px;
-                }
-            }
-        }
-
-        // Arrows
-
         .btn-prev,
         .btn-next,
         .btn-play {
@@ -850,7 +814,7 @@ form.blog-search-form .form-group button,
             left: 0;
 
             &:after {
-                content: "\f053";
+                content: '\f053';
             }
         }
         
@@ -858,7 +822,7 @@ form.blog-search-form .form-group button,
             right: 0;
 
             &:after {
-                content: "\f054";
+                content: '\f054';
             }
         }
         
@@ -1146,7 +1110,7 @@ form.blog-search-form .form-group button,
 	font-weight: bold;
 
     &:after {
-        content: ':';
+        content: ':\00a0';
     }
 }
 
@@ -1175,17 +1139,19 @@ footer.blog-post-metadata {
 	margin-bottom: 10px;
 }
 
-.blog-post-tag a,
-.blog-post-category a {
-	color: @color-swatch3;
-	font-weight: normal;
-
+.blog-post-tag,
+.blog-post-category {
     &:after {
-        content: ',';
+        content: '',\00a0';
     }
 
     &:last-child:after {
         display: none;
+    }
+
+    a {
+        color: @color-swatch3;
+        font-weight: normal;
     }
 }
 

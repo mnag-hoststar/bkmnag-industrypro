@@ -266,7 +266,7 @@ blockquote {
 	
 			&:before {
 				position: absolute;
-				content: "\2013";
+				content: '\2013';
 				left: -2em;
 			}
 		}
@@ -708,13 +708,13 @@ header.bk-header {
 
 	.language-selector.language-selector--dropdown & {
 		&:before {
-			content: "";
+			content: '';
 			display: block;
 			height: @language-line-height;
 		}
 
 		&:after {
-			content: "";
+			content: '';
 			display: block;
 			height: @language-padding*2;
 		}
@@ -822,7 +822,7 @@ header.bk-header {
 	&--current {
 		&:after {
 			.language-selector.language-selector--dropdown & {
-				content: "\25be";
+				content: '\25be';
 				top: 50%;
 				right: 0;
 				margin-top: -(@language-line-height/4);
@@ -1343,12 +1343,12 @@ footer.bk-footer {
 		padding-bottom: 0;
 
 		&:after {
-			content: ",";
+			content: '',\00a0';
 			margin-left: 0;
 		}
-
-		&:last-of-type:after {
-			display: none;
+	
+		&:last-child:after {
+			content: none;
 		}
 	}
 }
@@ -1558,7 +1558,7 @@ select {
 		&:after {
 			cursor: pointer;
 			display: block;
-			content: " ";
+			content: ' ';
 			position: absolute;
 			top: 0;
 			left: 0;
