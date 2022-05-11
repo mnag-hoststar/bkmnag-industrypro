@@ -310,9 +310,10 @@ form.blog-search-form .form-group button,
 	letter-spacing: @font-swatch7-letter-spacing;
 	font-size: @font-swatch7-font-size; 
     color: @font-swatch7-color;
+    text-align: center;
 	text-decoration: none;
 	padding: 12px 25px;
-    height: 40px;
+    height: auto !important;
     min-height: 40px;
     border: 0;
 
@@ -425,6 +426,17 @@ form.blog-search-form .form-group button,
 	padding-left: 3.2em !important;
     background-size: 1.2em;
     background-position: 1.25em center;
+}
+
+.widget.filedownload div {
+	@media @mobile {
+		float: none;
+	}
+
+	span.file-name {
+		display: block;
+		margin: 0.5em 0;
+	}
 }
 
 // Social Icons

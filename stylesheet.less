@@ -306,8 +306,7 @@ blockquote {
 
 table {
 	overflow: auto;
-	width: 100%;
-	max-width: 100%;
+	min-width: 100%;
 	border: none;
 	border-collapse: separate;
 	border-spacing: 0;
@@ -399,12 +398,16 @@ td {
 		display: block;
 		padding: 0 0.5em;
 		border-bottom: none;
+		width: 100% !important;
+		max-width: 100%;
 	}
 	
 	.responsivecolumns & {
 		display: block;
 		padding: 0 0.5em;
 		border-bottom: none;
+		width: 100% !important;
+		max-width: 100%;
 	}
 	
 	&:first-child {
@@ -1130,9 +1133,11 @@ header.bk-header {
 
 					li {
 						display: block;
-
-						.text {
+								
+						a .text {
 							padding: 0px;
+							overflow: visible;
+							word-break: break-word;
 						}
 					}
 				}
@@ -1343,7 +1348,7 @@ footer.bk-footer {
 		padding-bottom: 0;
 
 		&:after {
-			content: '',\00a0';
+			content: '\00a0';
 			margin-left: 0;
 		}
 	
@@ -1570,6 +1575,7 @@ select {
 			width: floor(@font-swatch5-line-height*0.8);
 			background-color: @color-swatch1;
 			border: 1px solid @font-swatch7-background-color;
+			border-radius: 0;
 
 			.style--light & {
 				border-color: @font-swatch7-background-color;
