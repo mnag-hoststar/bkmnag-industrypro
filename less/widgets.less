@@ -72,7 +72,8 @@ select {
 	text-indent: 5px;
 	background-color: @color-swatch1;
 	width: auto;
-	height: 40px;
+	min-height: 40px;
+    height: auto !important;
 
     .style--light & {
         border-color: fade(@color-swatch3, 15%);
@@ -313,7 +314,7 @@ form.blog-search-form .form-group button,
     text-align: center;
 	text-decoration: none;
 	padding: 12px 25px;
-    height: auto !important;
+    height: auto;
     min-height: 40px;
     border: 0;
 
@@ -445,18 +446,17 @@ form.blog-search-form .form-group button,
 .widget.profile .bk-profile-socialicons {
 	span {
 		a {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			background-image: none;
+            display: inline-block;
+            background-image: none;
             background-color: @font-swatch7-background-color;
-			margin: 0 5px 10px 0;
-			padding: 0;
-			width: 32px;
-			height: 32px;
-			min-height: 32px;
-			text-indent: 0;
-			font-size: 0;
+            margin: 0 5px 10px 0;
+            width: 32px;
+            height: 32px;
+            min-height: 32px;
+            text-indent: 0;
+            font-size: 0;
+            min-width: 32px;
+            padding: 8px 0px;
 
             .style--light & {
                 background-color: @font-swatch7-background-color;
@@ -1154,7 +1154,7 @@ footer.blog-post-metadata {
 .blog-post-tag,
 .blog-post-category {
     &:after {
-        content: '',\00a0';
+        content: ',\00a0';
     }
 
     &:last-child:after {
