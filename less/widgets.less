@@ -74,17 +74,21 @@ select {
 	width: auto;
 	min-height: 40px;
     height: auto !important;
+    color: @font-swatch5-color;
 
     .style--light & {
         border-color: fade(@color-swatch3, 15%);
+        color: @font-swatch5-color;
     }
 
     .style--accent & {
         border-color: fade(@color--dark, 15%);
+        color: @font-swatch5-color;
     }
 
     .style--dark & {
         border-color: lighten(@color--dark, 15%);
+        color: @font-swatch5-color;
     }
 
 	@media @mobile {
@@ -124,7 +128,7 @@ textarea,
 }
 
 textarea {
-	height: 100px;
+	min-height: 100px;
 }
 
 .signupform fieldset input {
@@ -293,6 +297,7 @@ button.button,
 .advancedcontactform button.btn,
 .widget.tweet a,
 .widget.clicktocall a,
+.widget.clicktocall a:hover,
 .widget.dropbox button,
 .widget.filedownload button.btn,
 .widget.paypalbuynow .widget.button.paypal,
@@ -453,6 +458,7 @@ form.blog-search-form .form-group button,
             width: 32px;
             height: 32px;
             min-height: 32px;
+            line-height: 32px;
             text-indent: 0;
             font-size: 0;
             min-width: 32px;
@@ -471,9 +477,11 @@ form.blog-search-form .form-group button,
             }
 
 			&:before {
-				font-family: 'FontAwesome';
-				text-indent: 0;
-				font-size: 18px;
+                display: block;
+                font-family: 'FontAwesome';
+                text-indent: 0;
+                font-size: 18px;
+                line-height: 18px;
 			}
 
             footer {
