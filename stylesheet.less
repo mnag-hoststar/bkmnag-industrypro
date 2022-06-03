@@ -5,10 +5,6 @@
 @import "@{templateLocal}/less/ecommerce.less";
 @import "@{templateLocal}/less/layout-header.less";
 
-@tablet-large: ~"only screen and (max-width: 940px)";
-@mobile-large: ~"only screen and (max-width: 530px)";
-@mobile-small: ~"only screen and (max-width: 380px)";
-
 // Mixins
 
 .appearance(@appearance: none) {
@@ -937,7 +933,7 @@ header.bk-header {
 		text-overflow: ellipsis;
 
 		.language-selector--flag-text& {
-			@media @mobile-small {
+			@media @mobile {
 				display: none;
 			}
 		}

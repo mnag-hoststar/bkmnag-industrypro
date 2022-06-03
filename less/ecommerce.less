@@ -629,11 +629,8 @@
 				margin-top: 0em;
 				margin-right: 0.5em;
 				background-image: none;
-				height: 1.5em;
-				width: 1.5em;
 				font-family: 'FontAwesome';
 				text-indent: 0;
-				font-size: 1.25em;
 			}
 
 			// Added
@@ -652,11 +649,8 @@
 					margin-top: -0.25em;
 					margin-right: 0.5em;
 					background-image: none;
-					height: 1.5em;
-					width: 1.5em;
 					font-family: 'FontAwesome';
 					text-indent: 0;
-					font-size: 1.25em;
 				}
 			}
 		}
@@ -734,7 +728,7 @@
 				padding: 0 10px;
 				text-align: left;
 
-				@media @mobile-small {
+				@media @mobile {
 					display: none;
 				}
 			}
@@ -751,7 +745,7 @@
 		tr td {
 			border-bottom: 1px solid darken(@color-swatch1,10%);
 
-			@media @mobile-small {
+			@media @mobile {
 				float: left;
 				display: table;
 				width: 100%;
@@ -766,7 +760,7 @@
 					padding: 20px 10px;
 				}
 
-				@media @mobile-small { 
+				@media @mobile { 
 					padding: 20px;
 				}
 			}
@@ -779,7 +773,7 @@
 					padding: 20px 10px 10px 0;
 				}
 
-				@media @mobile-small { 
+				@media @mobile { 
 					padding: 0 20px;
 				}
 			}
@@ -794,7 +788,7 @@
 					line-height: 16px;
 				}
 
-				@media @mobile-small { 
+				@media @mobile { 
 					padding: 10px 20px;
 					border-left: 0;
 					border-top: 1px solid darken(@color-swatch1,10%);
@@ -845,7 +839,7 @@
 		}
 
 		tr:last-child td:first-child {
-			@media @mobile-small { 
+			@media @mobile { 
 				display: none;
 			}
 		}
@@ -868,7 +862,7 @@
 			position: absolute;
 			right: 20px;
 
-			@media @tablet-large {
+			@media @tablet {
 				position: relative;
 				top: 0;
 				right: 0;
@@ -888,7 +882,7 @@
 		.checkout-quantitybtn {
 			top: 45px;
 
-			@media @tablet-large {
+			@media @tablet {
 				top: 10px;
 			}
 
@@ -975,6 +969,7 @@
 
 .widget.ecombasketsummary {
 	padding-top: 20px;
+	border: none;
 
 	a {
 		font-family: @font-swatch7-font-family;
@@ -1000,14 +995,7 @@
 		}
 
 		tr:first-child { 
-			outline: 1px solid darken(@color-swatch1,10%);
 			background-color: darken(@color-swatch1,4%);
-			-webkit-border-top-left-radius: 4px;
-			-webkit-border-top-right-radius: 4px;
-			-moz-border-radius-topleft: 4px;
-			-moz-border-radius-topright: 4px;
-			border-top-left-radius: 4px;
-			border-top-right-radius: 4px;
 			font-family: @font-swatch4-font-family;
 			font-size: 14px;
 			font-weight: 400;
@@ -1037,13 +1025,12 @@
 		th {
 			text-align: left;
 			position: relative;
-			left: 20px;
 		}
 
 		tr td {
 			border-bottom: 1px solid darken(@color-swatch1,10%);
 			
-			@media @mobile-small {
+			@media @mobile {
 				display: table;
 				width: 100%;
 				border-bottom: 0;
@@ -1059,7 +1046,7 @@
 			}
 
 			&:nth-child(2) {
-				@media @mobile-large {
+				@media @mobile {
 					padding-left: 0;
 				}
 			}
@@ -1072,21 +1059,21 @@
 			// Responsive
 
 			&:nth-child(1) {
-				@media @mobile-small {
+				@media @mobile {
 					padding-bottom: 0;
 				}
 			}
 
 			&:nth-child(2),
 			&:nth-child(3) {
-				@media @mobile-small {
+				@media @mobile {
 					padding: 0 20px 0;
 					border-left: 0;
 				}
 			}
 
 			&:last-child {
-				@media @mobile-small {
+				@media @mobile {
 					padding: 6px 20px;
 					margin: 20px 0 0;
 					border-bottom: 1px solid darken(@color-swatch1,10%);
@@ -1096,10 +1083,12 @@
 		}
 
 		tr:last-child td:last-child {
-			@media @mobile-small {
+			@media @mobile {
 				border-top: 0;
 				margin-top: 0;
 				padding-top: 0;
+				border-right: none;
+				padding-bottom: 20px;
 			}
 		}
 
@@ -1108,15 +1097,14 @@
 
 			@media @tablet {
 				img {
-					max-width: 100px!important;
+					max-width: 100px !important;
 				}
 			}
 
 			@media @mobile {
-				display: table-row-group;
 
 				img {
-					max-width: 80px!important;
+					max-width: 80px !important;
 				}
 
 				+ tr {
@@ -1131,7 +1119,7 @@
 			}
 
 			.image-wrap {
-				background-image: none!important;
+				background-image: none !important;
 			}
 
 			td:nth-child(2) {
@@ -1173,8 +1161,8 @@
 				}
 
 				button {
-					width: 30px;
-					height: 30px;
+					width: 40px;
+					height: 40px;
 					padding: 0;
 					box-shadow: none;
 					border: 0;
@@ -1257,5 +1245,6 @@
 		margin-right: 0;
 		width: 100%;
 		text-align: center;
+		padding: 12px 0;
 	}
 }
