@@ -131,19 +131,6 @@ textarea {
 	min-height: 100px;
 }
 
-.signupform fieldset input {
-    flex-grow: 1;
-    margin-right: 10px;
-
-	@media @mobile {
-	    margin-right: 0;
-	}
-
-	.responsivecolumns & {
-	    margin-right: 0;
-	}
-}
-
 
 // Contact, Signup, Profile, Delivery
 
@@ -222,26 +209,48 @@ label, .label,
 	width: 30%;
 }
 
-.signupform {
+.signupform form .form-group,
+.widget.profile form .form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 	margin-bottom: 10px;
-
-	@media @tablet {
-		max-width: 100%;
-	}
+    width: 100%;
 
 	@media @mobile {
-		max-width: 100%;
+        display: block;
 	}
 
 	label {
 	    font-size: @font-swatch5-font-size;
 	}
-
-    fieldset input {
-	    @media @mobile {
-	        width: 100%;
+		
+    input {
+        position: static;
+        margin: auto;
+        flex-grow: 1;
+    
+        @media @mobile {
+            width: 100%;
             margin-bottom: 10px;
-	    }
+        }
+
+        .responsivecolumns & {
+            width: 100%;
+        }
+    }
+
+    .btn {
+        margin: 0;
+        max-width: 30%;
+    
+        @media @mobile {
+            max-width: none;
+        }
+
+        .responsivecolumns & {
+            max-width: none;
+        }
     }
 }
 
