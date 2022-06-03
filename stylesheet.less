@@ -608,11 +608,17 @@ header.bk-header {
 }
 
 .header-left {
+    display: flex;
+    gap: 10px;
+    align-items: center;
 	width: 70%;
+	padding-right: 20px;
 
 	@media @tablet {
+		display: block;
 		width: 100%;
 		text-align: center;
+		padding-right: 0;
 	}
 }
 
