@@ -63,23 +63,26 @@
 	margin-bottom: 3em;
 }
 
-.widget.ecomproductslist .ecom-productslist-products,
-.widget.ecomfeaturedproducts .ecom-featuredproducts-wrap {
-	display: flex;
-	flex-wrap: wrap;
-	max-width: none;
-	margin: 10px -20px;
-	padding: 0;
-	overflow: hidden;
+.widget.ecomproductslist,
+.widget.ecomfeaturedproducts {
+	.ecom-productslist-products,
+	.ecom-featuredproducts-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: none;
+		margin: 0 -10px 40px;
+		padding: 0;
+		overflow: hidden;
 
-	@media @mobile {
-		display: block;
-		margin: 0;
-	}
+		@media @mobile {
+			display: block;
+			margin: 0;
+		}
 
-	.responsivecolumns & {
-		display: block;
-		margin: 0;
+		.responsivecolumns & {
+			display: block;
+			margin: 0;
+		}
 	}
 
 	// Filter
@@ -378,18 +381,6 @@
 	select[name="displayCount"] {
 	    margin-bottom: 0;
 	}
-}
-
-// Product Filter
-
-.widget.ecomproductslist .productlist-filter .productlist-display-form .form-group {
-    @media @tablet {
-		margin: 10px;
-	}
-
-	@media @mobile {
-        margin-bottom: 0;
-    }
 }
 
 // Item Count
