@@ -1163,17 +1163,12 @@ footer.blog-post-metadata {
 
 .blog-post-tag,
 .blog-post-category {
-    &:after {
-        content: ',\00a0';
-    }
-
-    &:last-child:after {
-        display: none;
-    }
 
     a {
         color: @color-swatch3;
         font-weight: normal;
+        max-width: 100%;
+        word-break: break-word;
     }
 }
 
